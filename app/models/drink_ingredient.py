@@ -4,6 +4,8 @@ from .ingredient import Ingredient
 
 
 class Drink_ingredient(db.Model):
+    __tablename__ = 'drink_ingredients'
+
     id = db.Column(db.Integer, primary_key=True)
     drinkId = db.Column(db.Integer, db.ForeignKey('drinks.id'), nullable=False)
     ingredientId = db.Column(db.Integer, db.ForeignKey(
