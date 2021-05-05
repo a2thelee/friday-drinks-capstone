@@ -38,9 +38,9 @@ def seed_drinks():
     ),
     Drink(name="Mai Tai", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/twyrrp1439907470.jpg", instructions="1oz light rum, 1/2oz orgeat syrup, 1/2oz triple sec, 1 1/2oz sweet and sour, 1 cherry. Shake all ingredients with ice. Strain into glass. Garnish and serve with straw."
     ),
-    Drink(name="Amaretto Sour", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/xnzc541493070211.jpg", instructions="Shake and strain. Garnish with a cherry and an orange slice."
+    Drink(name="Amaretto Sour", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/xnzc541493070211.jpg", instructions="1 1/2oz amaretto, 3oz sour mix. Shake and strain. Garnish with a cherry and an orange slice."
     ),
-    Drink(name="Singapore Sling", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/7dozeg1582578095.jpg", instructions="Pour all ingredients into cocktail shaker filled with ice cubes. Shake well. Strain into highball glass. Garnish with pineapple and cocktail cherry."
+    Drink(name="Singapore Sling", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/7dozeg1582578095.jpg", instructions="1/2oz cherry brandy, 1/2oz grenadine, 1oz gin, 2oz sweet and sour, carbonated water, cherry. Pour all ingredients into cocktail shaker filled with ice cubes. Shake well. Strain into highball glass. Garnish with pineapple and cocktail cherry."
     ),
   ]
 
