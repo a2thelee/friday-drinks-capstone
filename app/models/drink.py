@@ -9,6 +9,7 @@ class Drink(db.Model):
     isAlcoholic = db.Column(db.Boolean)
     photo_url = db.Column(db.String(1000))
     instructions = db.Column(db.String(1500), nullable=False)
+    authorId = db.Column(db.Integer)
     favorites = db.Column(db.Integer, default=0)
 
     favorite_drink = db.relationship('Favorite_drink', backref='drinks')
@@ -21,5 +22,6 @@ class Drink(db.Model):
             "isAlcoholic": self.isAlcoholic,
             "photo_url": self.photo_url,
             "instructions": self.instructions,
+            "authorId": self.authorId,
             "favorites": self.favorites
         }
