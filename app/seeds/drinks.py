@@ -103,9 +103,30 @@ def seed_drinks():
     Drink(name="Paloma", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/samm5j1513706393.jpg", instructions="3oz grapefruit juice, 1 1/2oz tequila, 1/2oz sugar syrup, 1/4oz lime juice. Stir together and serve over ice, garnish with a grapefruit slice."
     ),
 
+    Drink(name="Royal Fizz", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/wrh44j1504390609.jpg", instructions="1oz gin, 2oz sweet and sour, egg white, coca cola. Shake all ingredients (except cola) with ice and strain into a chilled collins glass. Fill with cola and serve."
+    ),
+    Drink(name="Strawberry Margarita", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/tqyrpw1439905311.jpg", instructions="1/2oz strawberry schnapps, 1oz tequila, 1/2oz triple sec, 1oz lemon juice, 1oz strawberries. Rub rim of cocktail glass with lemon juice and dip rim in salt. Shake schnapps, tequila, triple sec, lemon juice, and strawberries with ice, strain into the salt-rimmed glass, and serve."
+    ),
+    Drink(name="Sea breeze", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/7rfuks1504371562.jpg", instructions="1 1/2oz vodka, 4oz cranberry juice, 1oz grapefruit juice. Build all ingredients in a highball glass filled with ice. Garnish with lime wedge."
+    ),
+    Drink(name="Royal Gin Fizz", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/pe1x1c1504735672.jpg", instructions="2oz gin, juice of 1/2 lemon, 1tsp powdered sugar, egg white, carbonated water. Shake all ingredients (except carbonated water) with ice and strain into a highball glass over two ice cubes. Fill with carbonated water, stir, and serve.",
+    ),
+    Drink(name="Gin Basil Smash", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/jqh2141572807327.jpg", instructions="2oz gin, 1/2oz lemon juice, 1/2oz sugar syrup, basil. Muddle Basil leaves (~ 10) with Suggar Syrup in a shaker. Add Gin an Lemon Juice.\r\nFilter and serve in a tumbler with ice",
+    ),
+    Drink(name="Abbey Martini", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/2mcozt1504817403.jpg", instructions="2 shots gin, 1 shot sweet vermouth, 1 shot orange juice, 3 dashes angostura bitters. Put all ingredients into a shaker and mix, then strain contents into a chilled cocktail glass."
+    ),
+    Drink(name="Bacardi Cocktail", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/n433t21504348259.jpg", instructions="1 3/4oz bacardi, 1oz lime juice, 1/2tsp sugar syrup, 1 dash of grenadine. Shake together with ice. Strain into glass and serve.",
+    ),
+    Drink(name="Golden dream", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/qrot6j1504369425.jpg", instructions="2 parts galliano, 2 parts triple sec, 2 parts orange juice, 1 part cream. Shake with cracked ice. Strain into glass and serve."
+    ),
+    Drink(name="Sex on the Beach", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/lijtw51551455287.jpg", instructions="1oz vodka, 3/4oz peach schnapps, cranberry juice, grapefruit juice. Build all ingredients in a highball glass filled with ice. Garnish with orange slice.",
+    ),
+    Drink(name="Tequila Sunrise", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/quqyqp1480879103.jpg", instructions="1 1/2oz tequila, 3/4 cup orange juice, 3/4oz grenadine, orange slice, maraschino cherry. Pour the tequila and orange juice into glass over ice. Add the grenadine, which will sink to the bottom. Stir gently to create the sunrise effect. Garnish and serve.",
+    ),
+
   ]
 
-  # Drink(name="", isAlcoholic=True, photo_url="", instructions=""
+  # Drink(name= isAlcoholic=True, photo_url= instructions=
   #   ),
 
   db.session.add_all(drinks)
