@@ -62,6 +62,26 @@ def seed_drinks():
     ),
     Drink(name="Black Russian", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/8oxlqf1606772765.jpg", instructions="3/4oz coffee liqueur, 1 1/2oz vodka. Pour the ingredients into an old fashioned glass filled with ice cubes. Stir gently."
     ),
+    Drink(name="Funk and Soul", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/qtv83q1596015790.jpg", instructions="2 shots rum, 1 shot apricot nectar, 1 shot pomegranate juice, juice of 1/2 lemon, top with soda water. Mix all ingredients together and strain into a Collins glass. Use Jamaican rum where possible for a more authentic taste."
+    ),
+    Drink(name="Brandy Alexander", isAlcoholic=True, photo_url="https://upload.wikimedia.org/wikipedia/commons/6/67/Brandy_Alexander_on_the_Rocks.jpg", instructions="1oz brandy, 1 oz creme de cacao, 1 oz light cream, nutmeg. Shake all ingredients (except nutmeg) with ice and strain contents into a cocktail glass. Sprinkle nutmeg on top and serve."
+    ),
+    Drink(name="French 75", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/hrxfbl1606773109.jpg", instructions="1 1/2oz gin, 2 tsp superfine sugar, 1 1/2 oz lemon juice, 4oz chilled champagne, 1 orange, 1 maraschino cherry. Combine gin, sugar, and lemon juice in a cocktail shaker filled with ice. Shake vigorously and strain into a chilled champagne glass. Top up with Champagne. Stir gently."
+    ),
+    Drink(name="Autumn Garibaldi", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/ne7re71604179012.jpg", instructions="1 1/2oz campari, 2 1/2oz orange juice, 2 1/2oz ginger beer, orange peel. Pour all ingredients into a glass over ice and stir with a bar spoon. Garnish with some orange slices."
+    ),
+    Drink(name="Gin Fizz", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/drtihp1606768397.jpg", instructions="2oz gin, juice of 1/2 lemon, 1tsp powdered sugar, carbonated water. Shake all ingredients with ice cubes, except soda water. Pour into glass. Top with soda water."
+    ),
+    Drink(name="Rusty Nail", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/yqsvtw1478252982.jpg", instructions="1 1/2oz scotch, 1/2oz drambuie, 1 twist of lemon peel. Pour the Scotch and Drambuie into an old-fashioned glass almost filled with ice cubes. Stir well. Garnish with the lemon twist."
+    ),
+    Drink(name="Pisco Sour", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/tsssur1439907622.jpg", instructions="2oz pisco, 1oz lemon juice, 1-2 tblsp sugar, 1 egg white, ice. Vigorously shake and strain contents in a cocktail shaker with ice cubes, then pour into glass and garnish with bitters.\r\n"
+    ),
+    Drink(name="Rum Runner", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/vqws6t1504888857.jpg", instructions="1 1/2oz malibu rum, 1oz blackberry brandy, 3-4oz orange juice, 3-4oz pineapple juice, 3-4oz cranberry juice. Mix all ingredients in glass & add ice."
+    ),
+    Drink(name="Wine Punch", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/txustu1473344310.jpg", instructions="1 bottle red wine, 2 lemons, 1 cup of orange juice, 1 cup pineapple juice. Combine all of the ingredients and pour over a block of ice."
+    ),
+    Drink(name="Sangria", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/xrvxpp1441249280.jpg", instructions="1 bottle red wine, 1/2 cup sugar, 1 cup orange juice, 1 cup lemon juice, cloves, cinnamon. Mix all together in a pitcher and refrigerate. Add cloves and cinnamon sticks to taste. Serve in wine glasses."
+    ),
   ]
 
   # Drink(name="", isAlcoholic=True, photo_url="", instructions=""
