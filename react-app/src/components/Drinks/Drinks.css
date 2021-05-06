@@ -1,0 +1,9 @@
+.drinks-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.drink-photo {
+  height: 200px;
+  width: auto;
+}

@@ -48,9 +48,9 @@ function App() {
           <User />
         </ProtectedRoute>
 
-        <ProtectedRoute path="/" exact={true}>
+        <Route path="/" exact={true}>
           <Drinks />
-        </ProtectedRoute>
+        </Route>
 
       </Switch>
     </BrowserRouter>
