@@ -1,4 +1,4 @@
-.NavBar-div {
+.logged-out-container, .logged-in-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
