@@ -42,6 +42,67 @@ def seed_drinks():
     ),
     Drink(name="Singapore Sling", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/7dozeg1582578095.jpg", instructions="1/2oz cherry brandy, 1/2oz grenadine, 1oz gin, 2oz sweet and sour, carbonated water, cherry. Pour all ingredients into cocktail shaker filled with ice cubes. Shake well. Strain into highball glass. Garnish with pineapple and cocktail cherry."
     ),
+    Drink(name="French Martini", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/clth721504373134.jpg", instructions="1.5oz vodka, 1/2oz raspberry liqueur, 1/2oz pineapple juice. Pour all ingredients into shaker with ice cubes. Shake well and strain into a chilled cocktail glass. Squeeze oil from lemon peel onto the drink."
+    ),
+    Drink(name="Espresso Martini", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/n0sx531504372951.jpg", instructions="1.5oz vodka, 1/2oz kahlua, dash of sugar syrup. Pour ingredients into shaker filled with ice, shake vigorously, and strain into chilled martini glass"
+    ),
+    Drink(name="Strawberry Daiquiri", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/deu59m1504736135.jpg", instructions="1/2oz strawberry schnapps, 1oz light rum, 1oz lime juice, 1tsp powdered sugar, 1oz strawberries. Pour all ingredients into shaker with ice cubes. Shake well. Strain in chilled cocktail glass."
+    ),
+    Drink(name="Moscow Mule", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/3pylqc1504370988.jpg", instructions="2oz vodka, 2oz lime juice, 8oz ginger beer. Combine vodka and ginger beer in a highball glass filled with ice. Add lime juice. Stir gently. Garnish."
+    ),
+    Drink(name="Clover Club", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/t0aja61504348715.jpg", instructions="1 1/2oz gin, 2 tsp Grenadine, juice of 1/2 a lemon, 1 egg white. Dry shake ingredients to emulsify, add ice, shake and served straight up."
+    ),
+    Drink(name="Mint Julep", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/squyyq1439907312.jpg", instructions="4 fresh mint leaves, 1 1/2oz bourbon, 1tsp powdered sugar, 2 tsp water. In a highball glass gently muddle the mint, sugar and water. Fill the glass with cracked ice, add Bourbon and stir well until the glass is well frosted. Garnish with a mint sprig."
+    ),
+    Drink(name="John Collins", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/0t4bv71606854479.jpg", instructions="2oz bourbon, 1oz lemon juice, 1 tsp of superfine sugar, 3oz of club soda, 1 maraschino cherry, 1 orange. Pour all ingredients directly into highball glass filled with ice. Stir gently. Garnish. Add a dash of Angostura bitters."
+    ),
+    Drink(name="Gin Sour", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/noxp7e1606769224.jpg", instructions="2oz gin, 1oz lemon juice, 1/2 tsp of superfine sugar, 1 orange, 1 maraschino cherry. In a shaker half-filled with ice cubes, combine the gin, lemon juice, and sugar. Shake well. Strain into a sour glass and garnish with the orange slice and the cherry."
+    ),
+    Drink(name="White Lady", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/jofsaz1504352991.jpg", instructions="1.5oz gin, 1oz triple sec, 1/2oz lemon juice. Add all ingredients into cocktail shaker filled with ice. Shake well and strain into large cocktail glass."
+    ),
+    Drink(name="Black Russian", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/8oxlqf1606772765.jpg", instructions="3/4oz coffee liqueur, 1 1/2oz vodka. Pour the ingredients into an old fashioned glass filled with ice cubes. Stir gently."
+    ),
+    Drink(name="Funk and Soul", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/qtv83q1596015790.jpg", instructions="2 shots rum, 1 shot apricot nectar, 1 shot pomegranate juice, juice of 1/2 lemon, top with soda water. Mix all ingredients together and strain into a Collins glass. Use Jamaican rum where possible for a more authentic taste."
+    ),
+    Drink(name="Brandy Alexander", isAlcoholic=True, photo_url="https://upload.wikimedia.org/wikipedia/commons/6/67/Brandy_Alexander_on_the_Rocks.jpg", instructions="1oz brandy, 1 oz creme de cacao, 1 oz light cream, nutmeg. Shake all ingredients (except nutmeg) with ice and strain contents into a cocktail glass. Sprinkle nutmeg on top and serve."
+    ),
+    Drink(name="French 75", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/hrxfbl1606773109.jpg", instructions="1 1/2oz gin, 2 tsp superfine sugar, 1 1/2 oz lemon juice, 4oz chilled champagne, 1 orange, 1 maraschino cherry. Combine gin, sugar, and lemon juice in a cocktail shaker filled with ice. Shake vigorously and strain into a chilled champagne glass. Top up with Champagne. Stir gently."
+    ),
+    Drink(name="Autumn Garibaldi", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/ne7re71604179012.jpg", instructions="1 1/2oz campari, 2 1/2oz orange juice, 2 1/2oz ginger beer, orange peel. Pour all ingredients into a glass over ice and stir with a bar spoon. Garnish with some orange slices."
+    ),
+    Drink(name="Gin Fizz", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/drtihp1606768397.jpg", instructions="2oz gin, juice of 1/2 lemon, 1tsp powdered sugar, carbonated water. Shake all ingredients with ice cubes, except soda water. Pour into glass. Top with soda water."
+    ),
+    Drink(name="Rusty Nail", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/yqsvtw1478252982.jpg", instructions="1 1/2oz scotch, 1/2oz drambuie, 1 twist of lemon peel. Pour the Scotch and Drambuie into an old-fashioned glass almost filled with ice cubes. Stir well. Garnish with the lemon twist."
+    ),
+    Drink(name="Pisco Sour", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/tsssur1439907622.jpg", instructions="2oz pisco, 1oz lemon juice, 1-2 tblsp sugar, 1 egg white, ice. Vigorously shake and strain contents in a cocktail shaker with ice cubes, then pour into glass and garnish with bitters.\r\n"
+    ),
+    Drink(name="Rum Runner", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/vqws6t1504888857.jpg", instructions="1 1/2oz malibu rum, 1oz blackberry brandy, 3-4oz orange juice, 3-4oz pineapple juice, 3-4oz cranberry juice. Mix all ingredients in glass & add ice."
+    ),
+    Drink(name="Wine Punch", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/txustu1473344310.jpg", instructions="1 bottle red wine, 2 lemons, 1 cup of orange juice, 1 cup pineapple juice. Combine all of the ingredients and pour over a block of ice."
+    ),
+    Drink(name="Sangria", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/xrvxpp1441249280.jpg", instructions="1 bottle red wine, 1/2 cup sugar, 1 cup orange juice, 1 cup lemon juice, cloves, cinnamon. Mix all together in a pitcher and refrigerate. Add cloves and cinnamon sticks to taste. Serve in wine glasses."
+    ),
+    Drink(name="Kir Royale", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/yt9i7n1504370388.jpg", instructions="1 part creme de cassis, 5 parts champagne. Pour Creme de cassis in glass, gently pour champagne on top"
+    ),
+    Drink(name="Bellini", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/eaag491504367543.jpg", instructions="6oz champagne, 1oz peach schnapps. Pour peach purée into chilled flute, add sparkling wine. Stir gently."
+    ),
+    Drink(name="Lemon Drop", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/mtpxgk1504373297.jpg", instructions="1 1/2 shot absolut vodka, 1 1/2 shot cointreau, juice of one wedge of lemon. Shake and strain into a chilled cocktail glass rimmed with sugar."
+    ),
+    Drink(name="Pink Gin", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/qyr51e1504888618.jpg", instructions="3 dashes of angostura bitters, 2oz gin. Pour the bitters into a wine glass. Swirl the glass to coat the inside with the bitters, shake out the excess, add ice. Pour the gin into the glass. Garnish with straberries or lemon wedge"
+    ),
+    Drink(name="Salty Dog", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/4vfge01504890216.jpg", instructions="5oz grapefruit juice, 1 1/2oz gin, 1/4tsp salt. Pour all ingredients over ice cubes in a highball glass. Stir well and serve. (Vodka may be substituted for gin, if preferred.)"
+    ),
+    Drink(name="B-52", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/5a3vg61504372070.jpg", instructions="1/3oz bailey's irish cream, 1/3oz grand marnier, 1/4oz kahlua. Layer ingredients into a shot glass. Serve with a stirrer."
+    ),
+    Drink(name="Irish Spring", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/sot8v41504884783.jpg", instructions="1oz irish whiskey, 1/2oz peach brandy, 1oz orange juice, 1oz sweet and sour, 1 slice of orange, 1 maraschino cherry. Pour all ingredients (except orange slice and cherry) into a collins glass over ice cubes. Garnish with the slice of orange, add the cherry on top, and serve."
+    ),
+    Drink(name="Screwdriver", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/8xnyke1504352207.jpg", instructions="2oz vodka, 4oz orance juice. Mix in a highball glass with ice. Garnish and serve."
+    ),
+    Drink(name="French Connection", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/zaqa381504368758.jpg", instructions="1 1/2oz cognac, 3/4oz amaretto. our all ingredients directly into old fashioned glass filled with ice cubes. Stir gently."
+    ),
+    Drink(name="Paloma", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/samm5j1513706393.jpg", instructions="3oz grapefruit juice, 1 1/2oz tequila, 1/2oz sugar syrup, 1/4oz lime juice. Stir together and serve over ice, garnish with a grapefruit slice."
+    ),
+
   ]
 
   # Drink(name="", isAlcoholic=True, photo_url="", instructions=""
