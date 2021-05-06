@@ -1,5 +1,5 @@
 import { getDrinksThunk } from "../../store/drinks"
-import { useDispatch, useSelector } from "./react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import React, { useEffect, useState } from 'react'
 
 import './Drinks.css'
@@ -32,7 +32,7 @@ function Drinks() {
             <div className="drink-text">
               <p>{drink.name}</p>
               <p>{drinkAlcoholic(drink)}</p>
-              <p>drink.instructions</p>
+              <p>{drink.instructions}</p>
             </div>
           </div>
         )

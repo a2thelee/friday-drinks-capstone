@@ -8,7 +8,7 @@ import ProtectedRoute from "./components/auth/ProtectedRoute";
 import UsersList from "./components/UsersList";
 import User from "./components/User";
 
-import Drinks from "./components/Drinks"
+import Drinks from "./components/Drinks/Drinks"
 // import { authenticate } from "./services/auth";
 import { authenticate } from "./store/session";
 
