@@ -82,6 +82,27 @@ def seed_drinks():
     ),
     Drink(name="Sangria", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/xrvxpp1441249280.jpg", instructions="1 bottle red wine, 1/2 cup sugar, 1 cup orange juice, 1 cup lemon juice, cloves, cinnamon. Mix all together in a pitcher and refrigerate. Add cloves and cinnamon sticks to taste. Serve in wine glasses."
     ),
+    Drink(name="Kir Royale", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/yt9i7n1504370388.jpg", instructions="1 part creme de cassis, 5 parts champagne. Pour Creme de cassis in glass, gently pour champagne on top"
+    ),
+    Drink(name="Bellini", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/eaag491504367543.jpg", instructions="6oz champagne, 1oz peach schnapps. Pour peach purée into chilled flute, add sparkling wine. Stir gently."
+    ),
+    Drink(name="Lemon Drop", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/mtpxgk1504373297.jpg", instructions="1 1/2 shot absolut vodka, 1 1/2 shot cointreau, juice of one wedge of lemon. Shake and strain into a chilled cocktail glass rimmed with sugar."
+    ),
+    Drink(name="Pink Gin", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/qyr51e1504888618.jpg", instructions="3 dashes of angostura bitters, 2oz gin. Pour the bitters into a wine glass. Swirl the glass to coat the inside with the bitters, shake out the excess, add ice. Pour the gin into the glass. Garnish with straberries or lemon wedge"
+    ),
+    Drink(name="Salty Dog", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/4vfge01504890216.jpg", instructions="5oz grapefruit juice, 1 1/2oz gin, 1/4tsp salt. Pour all ingredients over ice cubes in a highball glass. Stir well and serve. (Vodka may be substituted for gin, if preferred.)"
+    ),
+    Drink(name="B-52", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/5a3vg61504372070.jpg", instructions="1/3oz bailey's irish cream, 1/3oz grand marnier, 1/4oz kahlua. Layer ingredients into a shot glass. Serve with a stirrer."
+    ),
+    Drink(name="Irish Spring", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/sot8v41504884783.jpg", instructions="1oz irish whiskey, 1/2oz peach brandy, 1oz orange juice, 1oz sweet and sour, 1 slice of orange, 1 maraschino cherry. Pour all ingredients (except orange slice and cherry) into a collins glass over ice cubes. Garnish with the slice of orange, add the cherry on top, and serve."
+    ),
+    Drink(name="Screwdriver", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/8xnyke1504352207.jpg", instructions="2oz vodka, 4oz orance juice. Mix in a highball glass with ice. Garnish and serve."
+    ),
+    Drink(name="French Connection", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/zaqa381504368758.jpg", instructions="1 1/2oz cognac, 3/4oz amaretto. our all ingredients directly into old fashioned glass filled with ice cubes. Stir gently."
+    ),
+    Drink(name="Paloma", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/samm5j1513706393.jpg", instructions="3oz grapefruit juice, 1 1/2oz tequila, 1/2oz sugar syrup, 1/4oz lime juice. Stir together and serve over ice, garnish with a grapefruit slice."
+    ),
+
   ]
 
   # Drink(name="", isAlcoholic=True, photo_url="", instructions=""
