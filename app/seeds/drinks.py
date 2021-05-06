@@ -42,6 +42,26 @@ def seed_drinks():
     ),
     Drink(name="Singapore Sling", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/7dozeg1582578095.jpg", instructions="1/2oz cherry brandy, 1/2oz grenadine, 1oz gin, 2oz sweet and sour, carbonated water, cherry. Pour all ingredients into cocktail shaker filled with ice cubes. Shake well. Strain into highball glass. Garnish with pineapple and cocktail cherry."
     ),
+    Drink(name="French Martini", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/clth721504373134.jpg", instructions="1.5oz vodka, 1/2oz raspberry liqueur, 1/2oz pineapple juice. Pour all ingredients into shaker with ice cubes. Shake well and strain into a chilled cocktail glass. Squeeze oil from lemon peel onto the drink."
+    ),
+    Drink(name="Espresso Martini", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/n0sx531504372951.jpg", instructions="1.5oz vodka, 1/2oz kahlua, dash of sugar syrup. Pour ingredients into shaker filled with ice, shake vigorously, and strain into chilled martini glass"
+    ),
+    Drink(name="Strawberry Daiquiri", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/deu59m1504736135.jpg", instructions="1/2oz strawberry schnapps, 1oz light rum, 1oz lime juice, 1tsp powdered sugar, 1oz strawberries. Pour all ingredients into shaker with ice cubes. Shake well. Strain in chilled cocktail glass."
+    ),
+    Drink(name="Moscow Mule", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/3pylqc1504370988.jpg", instructions="2oz vodka, 2oz lime juice, 8oz ginger beer. Combine vodka and ginger beer in a highball glass filled with ice. Add lime juice. Stir gently. Garnish."
+    ),
+    Drink(name="Clover Club", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/t0aja61504348715.jpg", instructions="1 1/2oz gin, 2 tsp Grenadine, juice of 1/2 a lemon, 1 egg white. Dry shake ingredients to emulsify, add ice, shake and served straight up."
+    ),
+    Drink(name="Mint Julep", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/squyyq1439907312.jpg", instructions="4 fresh mint leaves, 1 1/2oz bourbon, 1tsp powdered sugar, 2 tsp water. In a highball glass gently muddle the mint, sugar and water. Fill the glass with cracked ice, add Bourbon and stir well until the glass is well frosted. Garnish with a mint sprig."
+    ),
+    Drink(name="John Collins", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/0t4bv71606854479.jpg", instructions="2oz bourbon, 1oz lemon juice, 1 tsp of superfine sugar, 3oz of club soda, 1 maraschino cherry, 1 orange. Pour all ingredients directly into highball glass filled with ice. Stir gently. Garnish. Add a dash of Angostura bitters."
+    ),
+    Drink(name="Gin Sour", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/noxp7e1606769224.jpg", instructions="2oz gin, 1oz lemon juice, 1/2 tsp of superfine sugar, 1 orange, 1 maraschino cherry. In a shaker half-filled with ice cubes, combine the gin, lemon juice, and sugar. Shake well. Strain into a sour glass and garnish with the orange slice and the cherry."
+    ),
+    Drink(name="White Lady", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/jofsaz1504352991.jpg", instructions="1.5oz gin, 1oz triple sec, 1/2oz lemon juice. Add all ingredients into cocktail shaker filled with ice. Shake well and strain into large cocktail glass."
+    ),
+    Drink(name="Black Russian", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/8oxlqf1606772765.jpg", instructions="3/4oz coffee liqueur, 1 1/2oz vodka. Pour the ingredients into an old fashioned glass filled with ice cubes. Stir gently."
+    ),
   ]
 
   # Drink(name="", isAlcoholic=True, photo_url="", instructions=""
