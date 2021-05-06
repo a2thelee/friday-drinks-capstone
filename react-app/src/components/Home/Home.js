@@ -2,9 +2,9 @@ import { getDrinksThunk } from "../../store/drinks"
 import { useDispatch, useSelector } from "react-redux"
 import React, { useEffect, useState } from 'react'
 
-import './Drinks.css'
+import './Home.css'
 
-function Drinks() {
+function Home() {
   const dispatch = useDispatch()
   const drinks = useSelector(state => state.drinks)
 
@@ -29,7 +29,7 @@ function Drinks() {
             <div className="drink-photo-container">
               <img src={drink.photo_url} className="drink-photo" />
             </div>
-            <div className="drink-text">
+            <div className="drink-text-div">
               <p>{drink.name}</p>
               <p>{drinkAlcoholic(drink)}</p>
               <p>{drink.instructions}</p>
@@ -41,4 +41,4 @@ function Drinks() {
   )
 }
 
-export default Drinks
+export default Home
