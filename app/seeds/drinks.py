@@ -124,6 +124,26 @@ def seed_drinks():
     Drink(name="Tequila Sunrise", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/quqyqp1480879103.jpg", instructions="1 1/2oz tequila, 3/4 cup orange juice, 3/4oz grenadine, orange slice, maraschino cherry. Pour the tequila and orange juice into glass over ice. Add the grenadine, which will sink to the bottom. Stir gently to create the sunrise effect. Garnish and serve.",
     ),
 
+    Drink(name="Brooklyn", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/ojsezf1582477277.jpg", instructions="2 oz rye whiskey, 1 oz dry vermouth, 1/4 oz maraschino liqueur, 3 dashes angostura bitters, 1 maraschino cherry. Combine ingredients with ice and stir until well-chilled. Strain into a chilled cocktail glass.",
+    ),
+    Drink(name="Caribbean Boilermaker", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/svsxsv1454511666.jpg", instructions="1 bottle of corona, 1 shot of light rum. Pour the Corona into an 18oz beer glass pour the rum into the beer."
+    ),
+    Drink(name="Gimlet", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/3xgldt1513707271.jpg", instructions="2 1/2 oz gin, 1/2 oz lime juice, 1/2 oz sugar syrup, 1 lime. Add all the ingredients to a shaker and fill with ice. Shake, and strain into a chilled cocktail glass or an Old Fashioned glass filled with fresh ice. Garnish with a lime wedge."
+    ),
+    Drink(name="Porto flip", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/64x5j41504351518.jpg", instructions="3 parts brandy, 9 parts port, 2 parts egg yolk. Shake ingredients together in a mixer with ice. Strain into glass, garnish and serve."
+    ),
+    Drink(name="Raspberry Cooler", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/suqyyx1441254346.jpg", instructions="2 oz raspberry vodka, 4 oz lemon lime soda, ice. Pour the raspberry vodka and soda into a highball glass almost filled with ice cubes. Stir well."
+    ),
+    Drink(name="Sidecar", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/x72sik1606854964.jpg", instructions="2 oz cognac, 1/2 oz cointreau, 1 oz lemon juice. Pour all ingredients into cocktail shaker filled with ice. Shake well and strain into cocktail glass."
+    ),
+    Drink(name="Champagne Cocktail", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/t5pv461606773026.jpg", instructions="chilled champagne, 1 piece sugar, 2 dashes of bitters, 1 twist of lemon peel, dash of cognac. Add dash of Angostura bitter onto sugar cube and drop it into champagne flute. Add cognac followed by gently pouring chilled champagne. Garnish with orange slice and maraschino cherry."
+    ),
+    Drink(name="Godfather", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/e5zgao1582582378.jpg", instructions="1 1/2 oz scotch, 3/4 oz amaretto. Pour all ingredients directly into old fashioned glass filled with ice cubes. Stir gently."
+    ),
+    Drink(name="Hemingway Special", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/jfcvps1504369888.jpg", instructions="12 parts rum, 8 parts grapefruit juice, 3 parts maraschino liqueur, 3 parts lime juice. Pour all ingredients into a shaker with ice. Shake."
+    ),
+    Drink(name="Frozen Pineapple Daiquiri", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/k3aecd1582481679.jpg", instructions="1 1/2 oz light rum, 4 chunks pineapple, 1 tblsp lime juice, 1/2 tsp sugar. Combine all ingredients with 1 cup of crushed ice in an electric blender. Blend at a low speed for a short length of time. Pour into a cocktail glass and serve."
+    ),
   ]
 
   # Drink(name= isAlcoholic=True, photo_url= instructions=
