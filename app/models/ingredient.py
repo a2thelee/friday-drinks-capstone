@@ -1,4 +1,5 @@
 from .db import db
+from .drink_ingredient import Drink_ingredients
 
 
 class Ingredient(db.Model):
@@ -7,8 +8,7 @@ class Ingredient(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(75), nullable=False)
 
-    drink_ingredient = db.relationship(
-        'Drink_ingredient', backref='ingredients')
+    drinks = db.relationship('Drink', secondary=Drink_ingredients)
 
     def to_dict(self):
         return {

@@ -1,6 +1,5 @@
 from flask import Blueprint, jsonify
 from app.models import Drink
-from app.models import Drink_ingredient
 from app.models import Ingredient
 
 drink_routes = Blueprint('drinks', __name__)

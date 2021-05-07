@@ -5,7 +5,7 @@ from flask_migrate import Migrate
 from flask_wtf.csrf import CSRFProtect, generate_csrf
 from flask_login import LoginManager
 
-from .models import db, User, Drink, Favorite_drink, Ingredient, Drink_ingredient
+from .models import db, User, Drink, Favorite_drink, Ingredient
 from .api.user_routes import user_routes
 from .api.auth_routes import auth_routes
 from .api.drink_routes import drink_routes
