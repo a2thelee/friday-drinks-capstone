@@ -4,13 +4,15 @@ import session from './session'
 import drinksReducer from "./drinks"
 import favoritesReducer from "./favorites"
 import ingredientsReducer from "./ingredients"
+import drinkIngredientsReducer from "./drinkIngredients"
 
 
 const rootReducer = combineReducers({
     session,
     drinks: drinksReducer,
     favorites: favoritesReducer,
-    ingredients: ingredientsReducer
+    ingredients: ingredientsReducer,
+    drinkIngredients: drinkIngredientsReducer
 });
 
 let enhancer;

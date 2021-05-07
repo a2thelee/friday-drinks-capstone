@@ -29,7 +29,6 @@ const ingredientsReducer = (ingredients = initialState, action) => {
   switch (action.type) {
     case GET_INGREDIENTS:
 
-
       const ingredientsPayload = action.payload
       const newIngredients = {}
       for (const ingredient of ingredientsPayload.ingredients) {

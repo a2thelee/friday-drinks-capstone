@@ -1,6 +1,7 @@
 import { getDrinksThunk } from "../../store/drinks"
 import { getFavoriteDrinksThunk } from "../../store/favorites"
 import { getIngredientsThunk } from "../../store/ingredients"
+import { getDrinkIngredientsThunk } from "../../store/drinkIngredients"
 import { useDispatch, useSelector } from "react-redux"
 import React, { useEffect } from 'react'
 
@@ -15,6 +16,7 @@ function Home() {
     dispatch(getDrinksThunk())
     // dispatch(getFavoriteDrinksThunk())
     // dispatch(getIngredientsThunk())
+    // dispatch(getDrinkIngredientsThunk())
   }, [dispatch])
 
   //is a drink alcoholic?
