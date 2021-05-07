@@ -1,5 +1,6 @@
 import { getDrinksThunk } from "../../store/drinks"
 import { getFavoriteDrinksThunk } from "../../store/favorites"
+import { getIngredientsThunk } from "../../store/ingredients"
 import { useDispatch, useSelector } from "react-redux"
 import React, { useEffect } from 'react'
 
@@ -8,11 +9,12 @@ import './Home.css'
 function Home() {
   const dispatch = useDispatch()
   const drinks = useSelector(state => state.drinks)
-  const favorites = useSelector(state => state.favorites)
+  // const favorites = useSelector(state => state.favorites)
 
   useEffect(() => {
     dispatch(getDrinksThunk())
-    dispatch(getFavoriteDrinksThunk())
+    // dispatch(getFavoriteDrinksThunk())
+    // dispatch(getIngredientsThunk())
   }, [dispatch])
 
   //is a drink alcoholic?

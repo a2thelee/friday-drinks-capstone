@@ -3,12 +3,14 @@ import thunk from 'redux-thunk';
 import session from './session'
 import drinksReducer from "./drinks"
 import favoritesReducer from "./favorites"
+import ingredientsReducer from "./ingredients"
 
 
 const rootReducer = combineReducers({
     session,
     drinks: drinksReducer,
-    favorites: favoritesReducer
+    favorites: favoritesReducer,
+    ingredients: ingredientsReducer
 });
 
 let enhancer;
