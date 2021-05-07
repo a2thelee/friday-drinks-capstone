@@ -136,7 +136,7 @@ def seed_drinks():
     ),
     Drink(name="Sidecar", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/x72sik1606854964.jpg", instructions="2 oz cognac, 1/2 oz cointreau, 1 oz lemon juice. Pour all ingredients into cocktail shaker filled with ice. Shake well and strain into cocktail glass."
     ),
-    Drink(name="Champagne Cocktail", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/t5pv461606773026.jpg", instructions="chilled champagne, 1 piece sugar, 2 dashes of bitters, 1 twist of lemon peel, dash of cognac. Add dash of Angostura bitter onto sugar cube and drop it into champagne flute. Add cognac followed by gently pouring chilled champagne. Garnish with orange slice and maraschino cherry."
+    Drink(name="Champagne Cocktail", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/t5pv461606773026.jpg", instructions="chilled champagne, 1 sugar cube, 2 dashes of angostura bitters, 1 twist of lemon peel, dash of cognac. Add dash of Angostura bitter onto sugar cube and drop it into champagne flute. Add cognac followed by gently pouring chilled champagne. Garnish with orange slice and maraschino cherry."
     ),
     Drink(name="Godfather", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/e5zgao1582582378.jpg", instructions="1 1/2 oz scotch, 3/4 oz amaretto. Pour all ingredients directly into old fashioned glass filled with ice cubes. Stir gently."
     ),
