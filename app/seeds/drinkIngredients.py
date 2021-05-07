@@ -52,6 +52,7 @@ def seed_drink_ingredients():
   drink6.ingredients.append(Ingredient.query.get(77))
 
   drink7=Drink.query.get(7)
+  drink7.ingredients.append(Ingredient.query.get(461))
   drink7.ingredients.append(Ingredient.query.get(127))
 
   drink7.ingredients.append(Ingredient.query.get(270))

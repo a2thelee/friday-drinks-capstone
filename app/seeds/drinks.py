@@ -14,7 +14,7 @@ def seed_drinks():
     ),
     Drink(name="Caipirinha", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/jgvn7p1582484435.jpg", instructions="2 tsp sugar, 1 lime, 2 1/2oz of cachaca. Place lime and sugar into old fashioned glass and muddle (mash the two ingredients together using a muddler or a wooden spoon). Fill the glass with ice and add the Cachaça."
     ),
-     Drink(name="White Russian", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/vsrupw1472405732.jpg", instructions="2oz of coffee liqueur, 1 oz of light cream. Pour vodka and coffee liqueur over ice cubes in an old-fashioned glass. Fill with light cream and serve."
+     Drink(name="White Russian", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/vsrupw1472405732.jpg", instructions="2oz of vodka, 1 oz of coffee liqueur. Pour vodka and coffee liqueur over ice cubes in an old-fashioned glass. Fill with light cream and serve."
     ),
      Drink(name="Pina Colada", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/cpf4j51504371346.jpg", instructions="3oz light rum, 3 tblspn of coconut milk, 3tbl spoon of pineapple. Mix with crushed ice in blender until smooth. Pour into chilled glass, garnish and serve"
     ),
