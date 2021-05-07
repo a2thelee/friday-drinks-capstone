@@ -1,6 +1,4 @@
 from .db import db
-from .drink import Drink
-from .user import User
 
 
 class Favorite_drink(db.Model):
