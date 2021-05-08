@@ -24,6 +24,11 @@ function CreateDrinkForm() {
     //createDrinkThunk
   }
 
+  //handles checkbox logic for alcoholic or non-alcoholic
+  const checkAlcoholic = (e) => {
+    setAlcoholic(e.target.checked)
+  }
+
   //handles the user adding an image
   const addPhotoUrl = (e) => {
     const file = e.target.file;
@@ -41,24 +46,28 @@ function CreateDrinkForm() {
   Ingredient input fields
   */
 
+
+  // Alcoholic</input>
+  // Non-Alcoholic</input>
+
   return (
     <div className="create-drink-div">
       <form onSubmit={handleSubmit} className="create-drink-form">
-        <label>Drink Name:
-          <input type="text" value={name} onChange={e => setName(e.target.value)} />
-        </label>
+        <label>Drink Name:</label>
+        <input type="text" value={name} onChange={e => setName(e.target.value)} />
 
-        <label>Alcoholic or Non-Alcoholic?
-          <input type="checkbox">Alcoholic</input>
-          <input type="checkbox">Non-Alcoholic</input>
-        </label>
 
-        <label>Drink Picture
-          <input type="file" onChange={addPhotoUrl} />
-        </label>
+        <label> Contains Alcohol? </label>
+        <input type="checkbox" />
+
+        <label>Drink Picture</label>
+        <input type="file" onChange={addPhotoUrl} />
+
 
       </form>
     </div>
   )
 
 }
+
+export default CreateDrinkForm;

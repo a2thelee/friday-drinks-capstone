@@ -7,6 +7,7 @@ import NavBar from "./components/NavBar/NavBar";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 import UsersList from "./components/UsersList";
 import User from "./components/User";
+import CreateDrinkForm from "./components/CreateDrinkForm/CreateDrinkForm.js"
 
 import Home from "./components/Home/Home"
 // import { authenticate } from "./services/auth";
@@ -50,6 +51,10 @@ function App() {
 
         <Route path="/" exact={true}>
           <Home />
+        </Route>
+
+        <Route path="/create_drinks">
+          <CreateDrinkForm />
         </Route>
 
       </Switch>

@@ -1,7 +1,7 @@
 import { getDrinksThunk } from "../../store/drinks"
-import { getFavoriteDrinksThunk } from "../../store/favorites"
-import { getIngredientsThunk } from "../../store/ingredients"
-import { getDrinkIngredientsThunk } from "../../store/drinkIngredients"
+// import { getFavoriteDrinksThunk } from "../../store/favorites"
+// import { getIngredientsThunk } from "../../store/ingredients"
+// import { getDrinkIngredientsThunk } from "../../store/drinkIngredients"
 import { useDispatch, useSelector } from "react-redux"
 import React, { useEffect } from 'react'
 
