@@ -15,16 +15,19 @@ function CreateDrinkForm() {
   const [instructions, setInstructions] = useState('')
   const [ingredient, setIngredient] = useState('')
 
+  console.log(ingredientsList)
+
   useEffect(() => {
     dispatch(getIngredientsThunk())
   }, [dispatch])
 
+  // handles submit to dispatch create drink thunk NEEDS WORK
   const handleSubmit = (e) => {
     e.preventDefault()
     //createDrinkThunk
   }
 
-  //handles checkbox logic for alcoholic or non-alcoholic
+  //handles checkbox logic for alcoholic or non-alcoholic. NEEDS WORK
   const checkAlcoholic = (e) => {
     setAlcoholic(e.target.checked)
   }
@@ -63,6 +66,27 @@ function CreateDrinkForm() {
         <label>Drink Picture</label>
         <input type="file" onChange={addPhotoUrl} />
 
+        <label>Ingredients</label>
+        <input
+          type="text"
+          placeholder="Gin"
+          value={ingredient}
+          onChange={e => setIngredient(e.target.value)}
+        />
+        {ingredientsList.filter((item) => {
+          if (ingredient === "") {
+            return item
+          } else if (item.name.toLowerCase().includes(ingredient.toLowerCase())) {
+            return item
+          }
+        }).map((ingredient, key) => {
+          return (
+            <div key={ingredient.id} className="ingredients-input-list">
+              <p>{ingredient.name}</p>
+            </div>
+          )
+        })}
+
         <label>Instructions</label>
         <textarea
           type="text"
@@ -71,7 +95,7 @@ function CreateDrinkForm() {
           value={instructions}
           onChange={e => setInstructions(e.target.value)} />
       </form>
-    </div>
+    </div >
   )
 
 }
