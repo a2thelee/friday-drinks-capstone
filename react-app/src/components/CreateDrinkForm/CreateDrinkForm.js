@@ -7,7 +7,7 @@ import "./CreateDrinkForm.css"
 
 function CreateDrinkForm() {
   const dispatch = useDispatch()
-  const userId = useSelector(state => state.session.user.id)
+  const authorId = useSelector(state => state.session.user.id)
   const ingredientsList = Object.values(useSelector(state => state.ingredients))
 
   const [name, setName] = useState('')
@@ -31,7 +31,7 @@ function CreateDrinkForm() {
   }
   // const handleSubmit = (e) => {
   //   e.preventDefault()
-  //   createDrink(userId, name, ISALCOHOLIC, instructions, photo_url, ingredients)
+  //   createDrink(authorId, name, ISALCOHOLIC, instructions, photo_url, ingredients)
   //   history.push("/")
   // }
 
@@ -42,12 +42,12 @@ function CreateDrinkForm() {
 
   //handles the user adding an image
   const addPhotoUrl = (e) => {
-    const file = e.target.file;
-    setPhotoUrl(file)
+    setPhotoUrl(e.target.files.item(0))
   }
 
   //ingredient submission handler. HOLY SHIT IT WORKS!
   console.log("ingredients array please fucking work", ingredients)
+  console.log("these are instructions, the should work", instructions)
   const ingredientSubmit = (e) => {
     e.preventDefault();
     setIngredients([...ingredients, ingredient])
