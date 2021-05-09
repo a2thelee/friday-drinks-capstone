@@ -16,17 +16,24 @@ function CreateDrinkForm() {
   const [instructions, setInstructions] = useState('')
   const [ingredient, setIngredient] = useState('')
 
-  console.log(ingredientsList)
+  //an array to keep track of submitted ingredients since we are only using one input
+  const [ingredients, setIngredients] = useState([])
 
   useEffect(() => {
     dispatch(getIngredientsThunk())
   }, [dispatch])
 
   // handles submit to dispatch create drink thunk NEEDS WORK
+
   const handleSubmit = (e) => {
     e.preventDefault()
-    //createDrinkThunk
+
   }
+  // const handleSubmit = (e) => {
+  //   e.preventDefault()
+  //   createDrink(userId, name, ISALCOHOLIC, instructions, photo_url, ingredients)
+  //   history.push("/")
+  // }
 
   //handles checkbox logic for alcoholic or non-alcoholic. NEEDS WORK
   const checkAlcoholic = (e) => {
@@ -39,13 +46,11 @@ function CreateDrinkForm() {
     setPhotoUrl(file)
   }
 
-  //ingredient submission handler
-  let ingredientsArray = [];
-  console.log("ingredients Array=================", ingredientsArray)
-
+  //ingredient submission handler. HOLY SHIT IT WORKS!
+  console.log("ingredients array please fucking work", ingredients)
   const ingredientSubmit = (e) => {
     e.preventDefault();
-    ingredientsArray.push(e.target.value)
+    setIngredients([...ingredients, ingredient])
     setIngredient("")
   }
 
@@ -63,26 +68,26 @@ function CreateDrinkForm() {
         <input type="file" onChange={addPhotoUrl} />
 
         <label>Ingredients</label>
+
         <input
           type="text"
           placeholder="Gin"
           value={ingredient}
           onChange={e => setIngredient(e.target.value)}
         />
-        {ingredientsList.length ?
-          ingredientsList.filter((item) => {
-            if (ingredient === "") {
-              return item
-            } else if (item.name.toLowerCase().includes(ingredient.toLowerCase())) {
-              return item
-            }
-          }).map((ingredient) => {
-            return (
-              <div key={ingredient.id} className="ingredients-input-list">
-                <p onClick={e => ingredientSubmit(e)}>{ingredient.name}</p>
-              </div>
-            )
-          }) : null}
+        {ingredientsList.filter((item) => {
+          if (ingredient === "") {
+            return item
+          } else if (item.name.toLowerCase().includes(ingredient.toLowerCase())) {
+            return item
+          }
+        }).map((ingredient) => {
+          return (
+            <div key={ingredient.id} className="ingredients-input-list">
+              <p onClick={ingredientSubmit}>{ingredient.name}</p>
+            </div>
+          )
+        })}
 
         <label>Instructions</label>
         <textarea
