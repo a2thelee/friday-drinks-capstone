@@ -63,7 +63,13 @@ function CreateDrinkForm() {
         <label>Drink Picture</label>
         <input type="file" onChange={addPhotoUrl} />
 
-
+        <label>Instructions</label>
+        <textarea
+          type="text"
+          placeholder="measurements and directions"
+          required
+          value={instructions}
+          onChange={e => setInstructions(e.target.value)} />
       </form>
     </div>
   )
