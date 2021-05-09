@@ -19,3 +19,7 @@
 .create-drink-form input {
 	margin-top: 20px;
 }
+
+.create-drink-form [type="text"]:focus {
+	outline:none;
+}

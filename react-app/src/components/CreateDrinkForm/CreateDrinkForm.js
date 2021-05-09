@@ -1,6 +1,7 @@
 import { getIngredientsThunk } from "../../store/ingredients"
 import { useDispatch, useSelector } from "react-redux"
 import React, { useEffect, useState } from "react"
+import { NavLink } from "react-router-dom"
 
 import "./CreateDrinkForm.css"
 
@@ -38,20 +39,15 @@ function CreateDrinkForm() {
     setPhotoUrl(file)
   }
 
-  /*
-  userId
-  name (of drink)
-  isAlcoholic?
-  photoUrl
-  instructions
-  authorId
+  //ingredient submission handler
+  let ingredientsArray = [];
+  console.log("ingredients Array=================", ingredientsArray)
 
-  Ingredient input fields
-  */
-
-
-  // Alcoholic</input>
-  // Non-Alcoholic</input>
+  const ingredientSubmit = (e) => {
+    e.preventDefault();
+    ingredientsArray.push(e.target.value)
+    setIngredient("")
+  }
 
   return (
     <div className="create-drink-div">
@@ -73,19 +69,20 @@ function CreateDrinkForm() {
           value={ingredient}
           onChange={e => setIngredient(e.target.value)}
         />
-        {ingredientsList.filter((item) => {
-          if (ingredient === "") {
-            return item
-          } else if (item.name.toLowerCase().includes(ingredient.toLowerCase())) {
-            return item
-          }
-        }).map((ingredient, key) => {
-          return (
-            <div key={ingredient.id} className="ingredients-input-list">
-              <p>{ingredient.name}</p>
-            </div>
-          )
-        })}
+        {ingredientsList.length ?
+          ingredientsList.filter((item) => {
+            if (ingredient === "") {
+              return item
+            } else if (item.name.toLowerCase().includes(ingredient.toLowerCase())) {
+              return item
+            }
+          }).map((ingredient) => {
+            return (
+              <div key={ingredient.id} className="ingredients-input-list">
+                <p onClick={e => ingredientSubmit(e)}>{ingredient.name}</p>
+              </div>
+            )
+          }) : null}
 
         <label>Instructions</label>
         <textarea
