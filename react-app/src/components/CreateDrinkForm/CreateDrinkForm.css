@@ -1,3 +1,25 @@
 .create-drink-div{
+  max-width: 500px;
+	padding: 10px 20px;
+	background: #f4f7f8;
+	margin: 10px auto;
+	padding: 20px;
+	background: #f4f7f8;
+	border-radius: 8px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
 
+.create-drink-form{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.create-drink-form input {
+	margin-top: 20px;
+}
+
+.create-drink-form [type="text"]:focus {
+	outline:none;
 }

@@ -1,10 +1,16 @@
 //  ****************** ACTIONS ********************************/
 
 const GET_DRINKS = "drinks/GET_DRINKS"
+const CREATE_DRINK = "drinks/CREATE_DRINK"
 
 const getDrinks = (drinks) => ({
   type: GET_DRINKS,
   payload: drinks
+})
+
+const createDrink = (drink) => ({
+  type: CREATE_DRINK,
+  payload: drink
 })
 
 //*************** THUNK ACTION CREATORS ************************ */
@@ -14,10 +20,46 @@ export const getDrinksThunk = () => async (dispatch) => {
   if (!response.ok) {
     throw response
   }
-
   const drinks = await response.json()
   dispatch(getDrinks(drinks))
 }
+
+export const createDrinksThunk = (drinkData) => async (dispatch) => {
+  const { authorId, name, isAlcoholic, instructions, photo, ingredients } = drinkData
+
+  const body = new FormData();
+
+  body.append("photo", photo)
+  //makes fetch call to backend solely for converting
+  const imageRes = await fetch('/api/drinks/photo', {
+    method: "POST",
+    // headers: {
+    //   'Content-Type': 'multipart/form-data'
+    // },
+    body
+  });
+  const { photo_url } = await imageRes.json()
+
+  const response = await fetch('/api/drinks/create', {
+    method: 'POST',
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      authorId,
+      name,
+      isAlcoholic,
+      instructions,
+      photo_url,
+      ingredients
+    })
+  })
+
+  const newDrink = await response.json()
+  dispatch(createDrink(newDrink))
+  return newDrink
+}
+
 
 
 // ******************* Reducer ********************************/
@@ -33,6 +75,8 @@ const drinksReducer = (drinks = initialState, action) => {
         newDrinks[drink.id] = drink
       }
       return newDrinks;
+    case CREATE_DRINK:
+      return { ...drinks, [action.payload.id]: action.payload }
 
     default:
       return drinks;
