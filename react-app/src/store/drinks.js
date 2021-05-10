@@ -25,9 +25,22 @@ export const getDrinksThunk = () => async (dispatch) => {
 }
 
 export const createDrinksThunk = (drinkData) => async (dispatch) => {
-  const { authorId, name, isAlcoholic, instructions, photo_url, ingredients } = drinkData
+  const { authorId, name, isAlcoholic, instructions, photo, ingredients } = drinkData
 
-  const response = await fetch('api/drinks/create', {
+  const body = new FormData();
+
+  body.append("photo", photo)
+  //makes fetch call to backend solely for converting
+  const imageRes = await fetch('/api/drinks/photo', {
+    method: "POST",
+    // headers: {
+    //   'Content-Type': 'multipart/form-data'
+    // },
+    body
+  });
+  const { photo_url } = await imageRes.json()
+
+  const response = await fetch('/api/drinks/create', {
     method: 'POST',
     headers: {
       "Content-Type": "application/json"

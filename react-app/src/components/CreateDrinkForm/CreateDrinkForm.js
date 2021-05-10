@@ -1,20 +1,21 @@
 import { getIngredientsThunk } from "../../store/ingredients"
 import { useDispatch, useSelector } from "react-redux"
+import { useHistory } from "react-router-dom"
 import React, { useEffect, useState } from "react"
-import { NavLink } from "react-router-dom"
+import { createDrinksThunk } from "../../store/drinks"
 
 import "./CreateDrinkForm.css"
 
 function CreateDrinkForm() {
   const dispatch = useDispatch()
+  const history = useHistory()
   const authorId = useSelector(state => state.session.user.id)
   const ingredientsList = Object.values(useSelector(state => state.ingredients))
-
   const [name, setName] = useState('')
-  const [alcoholic, setAlcoholic] = useState(false)
-  const [photoUrl, setPhotoUrl] = useState('')
+  const [photo, setPhoto] = useState('')
   const [instructions, setInstructions] = useState('')
   const [ingredient, setIngredient] = useState('')
+  const [isAlcoholic, setAlcoholic] = useState(false)
 
   //an array to keep track of submitted ingredients since we are only using one input
   const [ingredients, setIngredients] = useState([])
@@ -27,76 +28,97 @@ function CreateDrinkForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-
+    dispatch(createDrinksThunk({ authorId, name, isAlcoholic, ingredients, instructions, photo }))
+    history.push("/")
   }
-  // const handleSubmit = (e) => {
-  //   e.preventDefault()
-  //   createDrink(authorId, name, ISALCOHOLIC, instructions, photo_url, ingredients)
-  //   history.push("/")
-  // }
 
   //handles checkbox logic for alcoholic or non-alcoholic. NEEDS WORK
   const checkAlcoholic = (e) => {
-    setAlcoholic(e.target.checked)
+    setAlcoholic(alcoholic => !alcoholic)
   }
 
   //handles the user adding an image
-  const addPhotoUrl = (e) => {
-    setPhotoUrl(e.target.files[0])
+  const addPhoto = (e) => {
+    setPhoto(e.target.files[0])
   }
 
   //ingredient submission handler. HOLY SHIT IT WORKS!
-  console.log("ingredients array please fucking work", ingredients)
-  console.log("these are instructions, the should work", instructions)
   const ingredientSubmit = (e) => {
     e.preventDefault();
-    setIngredients([...ingredients, ingredient])
+    // console.log(e.currentTarget, "current target ---------------")
+    // console.log(e.currentTarget.ingredientId, "ingredientId ------------------")
+    setIngredients([...ingredients, +e.currentTarget.dataset.ingredientId])
+    // console.log(ingredients, "ingredients array +++++++")
     setIngredient("")
   }
 
   return (
     <div className="create-drink-div">
       <form onSubmit={handleSubmit} className="create-drink-form">
-        <label>Drink Name:</label>
-        <input type="text" value={name} onChange={e => setName(e.target.value)} />
+        <div className="drink-name-div">
+          <label>Drink Name:</label>
+          <input
+            type="text"
+            value={name}
+            onChange={e => setName(e.target.value)}
+          />
+        </div>
 
+        <div className="checkbox-div">
+          <label> Contains Alcohol? </label>
+          <input
+            type="checkbox"
+            checked={isAlcoholic}
+            onChange={checkAlcoholic}
+          />
+        </div>
 
-        <label> Contains Alcohol? </label>
-        <input type="checkbox" />
+        <div className="drink-picture-div">
+          <label>Drink Picture</label>
+          <input
+            type="file"
+            onChange={addPhoto}
+          />
+        </div>
 
-        <label>Drink Picture</label>
-        <input type="file" onChange={addPhotoUrl} />
+        <div className="ingredients-input-div">
+          <label>Ingredients</label>
+          <input
+            type="text"
+            placeholder="Gin"
+            value={ingredient}
+            onChange={e => setIngredient(e.target.value)}
+          />
 
-        <label>Ingredients</label>
+          {ingredientsList.filter((item) => {
+            if (ingredient === "") {
+              return item
+            } else if (item.name.toLowerCase().includes(ingredient.toLowerCase())) {
+              return item
+            }
+          }).map((ingredient) => {
+            return (
+              <div data-ingredient-id={ingredient.id}
+                key={ingredient.id}
+                className="ingredients-input-list"
+                onClick={ingredientSubmit}>
+                <p>{ingredient.name}</p>
+              </div>
+            )
+          })}
+        </div>
 
-        <input
-          type="text"
-          placeholder="Gin"
-          value={ingredient}
-          onChange={e => setIngredient(e.target.value)}
-        />
-        {ingredientsList.filter((item) => {
-          if (ingredient === "") {
-            return item
-          } else if (item.name.toLowerCase().includes(ingredient.toLowerCase())) {
-            return item
-          }
-        }).map((ingredient) => {
-          return (
-            <div key={ingredient.id} className="ingredients-input-list">
-              <p onClick={ingredientSubmit}>{ingredient.name}</p>
-            </div>
-          )
-        })}
-
-        <label>Instructions</label>
-        <textarea
-          type="text"
-          placeholder="measurements and directions"
-          required
-          value={instructions}
-          onChange={e => setInstructions(e.target.value)} />
+        <div className="instructions-div">
+          <label>Instructions</label>
+          <textarea
+            type="text"
+            placeholder="measurements and directions"
+            required
+            value={instructions}
+            onChange={e => setInstructions(e.target.value)} />
+        </div>
       </form>
+      <button type="submit" onClick={handleSubmit}>Submit</button>
     </div >
   )
 
