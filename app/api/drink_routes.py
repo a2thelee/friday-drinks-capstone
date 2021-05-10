@@ -2,6 +2,7 @@ from flask import Blueprint, jsonify, request
 from app.models import Drink
 from app.models import db, Ingredient
 from app.awsupload import upload_file_to_s3, allowed_file, get_unique_filename
+from flask_login import login_required
 
 drink_routes = Blueprint('drinks', __name__)
 
@@ -12,7 +13,7 @@ def all_drinks():
   drinks = Drink.query.all()
   return {'drinks': [drink.to_dict() for drink in drinks]}
 
-# convert photo file to url AND uploads to AWS bucket
+# convert photo file to url AND uploads to AWS bucket. WORKS
 @drink_routes.route('/photo', methods=["POST"])
 def photo_file_convert():
   if "photo" not in request.files:
@@ -33,11 +34,9 @@ def photo_file_convert():
   url = upload["url"]
   return {"photo_url": url}
 
-
-
 # Create drink route. WORKS
 @drink_routes.route('/create', methods=['POST'])
-#@login required
+@login_required
 def create_drink():
   print(request.json, "---------------------------------")
   newAuthorId = request.json["authorId"]

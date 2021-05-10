@@ -24,7 +24,7 @@ function CreateDrinkForm() {
     dispatch(getIngredientsThunk())
   }, [dispatch])
 
-  // handles submit to dispatch create drink thunk NEEDS WORK
+  // handles submit to dispatch create drink thunk
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -32,7 +32,7 @@ function CreateDrinkForm() {
     history.push("/")
   }
 
-  //handles checkbox logic for alcoholic or non-alcoholic. NEEDS WORK
+  //handles checkbox logic for alcoholic or non-alcoholic
   const checkAlcoholic = (e) => {
     setAlcoholic(alcoholic => !alcoholic)
   }
