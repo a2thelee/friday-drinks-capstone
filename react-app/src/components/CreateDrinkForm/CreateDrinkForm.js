@@ -42,7 +42,7 @@ function CreateDrinkForm() {
 
   //handles the user adding an image
   const addPhotoUrl = (e) => {
-    setPhotoUrl(e.target.files.item(0))
+    setPhotoUrl(e.target.files[0])
   }
 
   //ingredient submission handler. HOLY SHIT IT WORKS!

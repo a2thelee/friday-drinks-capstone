@@ -27,25 +27,24 @@ export const getDrinksThunk = () => async (dispatch) => {
 export const createDrinksThunk = (drinkData) => async (dispatch) => {
   const { authorId, name, isAlcoholic, instructions, photo_url, ingredients } = drinkData
 
-  const formData = new FormData();
-  formData.append("name", name)
-  formData.append("authorId", authorId)
-  formData.append("isAlcoholic", isAlcoholic)
-  formData.append("instructions", instructions)
-  formData.append("photo_url", photo_url)
-  formData.append("ingredients", ingredients)
-
   const response = await fetch('api/drinks/create', {
     method: 'POST',
-    body: formData
-  });
-
-  if (!response.ok) {
-    throw response
-  }
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      authorId,
+      name,
+      isAlcoholic,
+      instructions,
+      photo_url,
+      ingredients
+    })
+  })
 
   const newDrink = await response.json()
   dispatch(createDrink(newDrink))
+  return newDrink
 }
 
 
@@ -63,6 +62,8 @@ const drinksReducer = (drinks = initialState, action) => {
         newDrinks[drink.id] = drink
       }
       return newDrinks;
+    case CREATE_DRINK:
+      return { ...drinks, [action.payload.id]: action.payload }
 
     default:
       return drinks;

@@ -38,8 +38,6 @@ function Home() {
             </div>
             <div className="drink-text-div">
               <p>{drink.name}</p>
-              <p>{drinkAlcoholic(drink)}</p>
-              <p>{drink.instructions}</p>
             </div>
           </div>
         )
