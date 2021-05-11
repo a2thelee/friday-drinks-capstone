@@ -1,7 +1,9 @@
 //  ****************** ACTIONS ********************************/
 
 const GET_DRINKS = "drinks/GET_DRINKS"
+const GET_ONE_DRINK = "drinks/GET_ONE_DRINK"
 const CREATE_DRINK = "drinks/CREATE_DRINK"
+const DELETE_DRINK = "drinks/DELETE_DRINK"
 
 const getDrinks = (drinks) => ({
   type: GET_DRINKS,
@@ -10,6 +12,15 @@ const getDrinks = (drinks) => ({
 
 const createDrink = (drink) => ({
   type: CREATE_DRINK,
+  payload: drink
+})
+
+const deleteDrink = () => ({
+  type: DELETE_DRINK
+})
+
+const getOneDrink = (drink) => ({
+  type: GET_ONE_DRINK,
   payload: drink
 })
 
@@ -24,13 +35,14 @@ export const getDrinksThunk = () => async (dispatch) => {
   dispatch(getDrinks(drinks))
 }
 
+
+// Makes 2 fetch calls. 1 to the back end to upload photo file to AWS bucket and receives back a photo url. second fetch takes that photo url and sends it to back end with the rest of the form data.
 export const createDrinksThunk = (drinkData) => async (dispatch) => {
   const { authorId, name, isAlcoholic, instructions, photo, ingredients } = drinkData
 
   const body = new FormData();
 
   body.append("photo", photo)
-  //makes fetch call to backend solely for converting
   const imageRes = await fetch('/api/drinks/photo', {
     method: "POST",
     // headers: {
@@ -54,13 +66,30 @@ export const createDrinksThunk = (drinkData) => async (dispatch) => {
       ingredients
     })
   })
-
   const newDrink = await response.json()
   dispatch(createDrink(newDrink))
   return newDrink
 }
 
 
+// delete drink thunk
+export const deleteDrinkThunk = (id) => async (dispatch) => {
+  const response = await fetch(`/api/drinks/${id}`, { method: "DELETE" })
+
+  dispatch(deleteDrink())
+  return null;
+}
+
+// get one drink thunk
+export const getOneDrinkThunk = (id) => async (dispatch) => {
+  const response = await fetch(`/api/drinks/${id}`)
+  if (!response.ok) {
+    throw response
+  }
+
+  const drink = await response.json()
+  dispatch(getOneDrink(drink))
+}
 
 // ******************* Reducer ********************************/
 
@@ -75,8 +104,16 @@ const drinksReducer = (drinks = initialState, action) => {
         newDrinks[drink.id] = drink
       }
       return newDrinks;
+
+    case GET_ONE_DRINK:
+      const drinkPayload = action.payload
+      return drinkPayload
+
     case CREATE_DRINK:
       return { ...drinks, [action.payload.id]: action.payload }
+
+    case DELETE_DRINK:
+      return drinks;
 
     default:
       return drinks;

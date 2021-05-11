@@ -69,3 +69,9 @@ def delete_drink(id):
   db.session.delete(drink)
   db.session.commit()
   return {}
+
+#get one drink
+@drink_routes.route('/<int:id>')
+def get_one_drink(id):
+  drink = Drink.query.get(id)
+  return drink.to_dict()
