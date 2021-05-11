@@ -38,7 +38,7 @@ function Home() {
     <div className="drinks-container">
       {Object.values(drinks).map(drink => {
         return (
-          <DrinkContainer drink={drink} />
+          <DrinkContainer key={drink.id} drink={drink} />
           // <div
           //   className="single-drink-container"
           //   key={drink.id}
