@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
+import { useHistory } from "react-router-dom"
 
 const DrinkCard = (props) => {
+  const authorId = useSelector(state => state.session.user.id)
+  const history = useHistory()
 
   const drinkAlcoholic = (drink) => {
     if (drink.isAlcoholic) {
@@ -10,8 +13,19 @@ const DrinkCard = (props) => {
       return "Non-Alcoholic"
     }
   }
+
+  // const modalExit = async (e) => {
+  //   e.preventDefault()
+  //   history.push('/')
+  //   window.close.click()
+  // }
+
+
   return (
-    <div className="drinkcard-container">
+    <div
+      className="drinkcard-container"
+    // onClick={modalExit}
+    >
       <div className="drinkcard-photo-container">
         <img
           src={props.drink.photo_url}
@@ -36,7 +50,7 @@ const DrinkCard = (props) => {
       <div className="drinkcard-instructions">
         {props.drink.instructions}
       </div>
-    </div>
+    </div >
   )
 }
 
