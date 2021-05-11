@@ -13,7 +13,7 @@ def all_drinks():
   drinks = Drink.query.all()
   return {'drinks': [drink.to_dict() for drink in drinks]}
 
-# convert photo file to url AND uploads to AWS bucket. WORKS
+# upload file to AWS bucket and returns back a url. WORKS
 @drink_routes.route('/photo', methods=["POST"])
 def photo_file_convert():
   if "photo" not in request.files:
@@ -61,9 +61,11 @@ def create_drink():
   return newDrink.to_dict()
 
 
-  # newAuthorId = 1
-  # newName = "test-drink6"
-  # newIsAlcoholic = True
-  # newInstructions = "please work"
-  # newPhoto_url = "www.nothing.com"
-  # newIngredients = ["Gin", "Absinthe"]
+# Delete drink route. WORKS
+@drink_routes.route('/<int:id>', methods=['DELETE'])
+# @login_required
+def delete_drink(id):
+  drink = Drink.query.get(id)
+  db.session.delete(drink)
+  db.session.commit()
+  return {}

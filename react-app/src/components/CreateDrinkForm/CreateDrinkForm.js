@@ -42,13 +42,10 @@ function CreateDrinkForm() {
     setPhoto(e.target.files[0])
   }
 
-  //ingredient submission handler. HOLY SHIT IT WORKS!
+  //ingredient submission handler. sends ingredient IDs to thunk to make querying easier on the back end. WORKS!
   const ingredientSubmit = (e) => {
     e.preventDefault();
-    // console.log(e.currentTarget, "current target ---------------")
-    // console.log(e.currentTarget.ingredientId, "ingredientId ------------------")
     setIngredients([...ingredients, +e.currentTarget.dataset.ingredientId])
-    // console.log(ingredients, "ingredients array +++++++")
     setIngredient("")
   }
 
