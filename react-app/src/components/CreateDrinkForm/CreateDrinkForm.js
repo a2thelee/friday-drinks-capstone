@@ -24,7 +24,7 @@ function CreateDrinkForm() {
     dispatch(getIngredientsThunk())
   }, [dispatch])
 
-  // handles submit to dispatch create drink thunk NEEDS WORK
+  // handles submit to dispatch create drink thunk
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -32,7 +32,7 @@ function CreateDrinkForm() {
     history.push("/")
   }
 
-  //handles checkbox logic for alcoholic or non-alcoholic. NEEDS WORK
+  //handles checkbox logic for alcoholic or non-alcoholic
   const checkAlcoholic = (e) => {
     setAlcoholic(alcoholic => !alcoholic)
   }
@@ -42,13 +42,10 @@ function CreateDrinkForm() {
     setPhoto(e.target.files[0])
   }
 
-  //ingredient submission handler. HOLY SHIT IT WORKS!
+  //ingredient submission handler. sends ingredient IDs to thunk to make querying easier on the back end. WORKS!
   const ingredientSubmit = (e) => {
     e.preventDefault();
-    // console.log(e.currentTarget, "current target ---------------")
-    // console.log(e.currentTarget.ingredientId, "ingredientId ------------------")
     setIngredients([...ingredients, +e.currentTarget.dataset.ingredientId])
-    // console.log(ingredients, "ingredients array +++++++")
     setIngredient("")
   }
 
