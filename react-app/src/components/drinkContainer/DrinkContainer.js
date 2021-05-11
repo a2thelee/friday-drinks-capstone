@@ -2,6 +2,8 @@ import React, { useState } from "react"
 import { Modal } from "../../context/Modal"
 import DrinkCard from "../drinkCard/DrinkCard"
 
+import "./DrinkContainer.css"
+
 const DrinkContainer = ({ drink }) => {
   const [showModal, setShowModal] = useState(false)
 
