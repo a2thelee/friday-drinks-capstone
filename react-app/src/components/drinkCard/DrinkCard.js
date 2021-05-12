@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { useHistory } from "react-router-dom"
+import { deleteDrinkThunk } from "../../store/drinks"
 
 import "./DrinkCard.css"
 
 const DrinkCard = (props) => {
-  const authorId = useSelector(state => state.session.user.id)
+  const userId = useSelector(state => state.session.user.id)
+  const dispatch = useDispatch()
   const history = useHistory()
 
   const drinkAlcoholic = (drink) => {
@@ -16,25 +18,34 @@ const DrinkCard = (props) => {
     }
   }
 
-  // const modalExit = async (e) => {
-  //   e.preventDefault()
-  //   history.push('/')
-  //   window.close.click()
-  // }
+  const deleteDrink = (e) => {
+    e.preventDefault()
+    history.push("/")
+    dispatch(deleteDrinkThunk(e.target.id))
+  }
 
+  const checkIfUserCreated = (drink) => {
+    if (drink.authorId === userId) {
+      return (
+        <div>
+          <button onClick={deleteDrink}>X</button>
+        </div>
+      )
+    }
+  }
 
   return (
+
     <div
       className="drinkcard-container"
-    // onClick={modalExit}
     >
-      <div className="drinkcard-photo-container">
+      < div className="drinkcard-photo-container" >
         <img
           src={props.drink.photo_url}
           className="drinkcard-photo"
           alt="drink-pic"
         />
-      </div>
+      </div >
 
       <div className="drinkcard-name-div">
         <p>{props.drink.name}</p>
@@ -46,13 +57,17 @@ const DrinkCard = (props) => {
       </div>
 
       <div className="drinkcard-ingredients">
+        {console.log(props.drink.ingredient)}
         {props.drink.ingredients}
       </div>
 
       <div className="drinkcard-instructions">
         {props.drink.instructions}
       </div>
+
+      {checkIfUserCreated(props.drink)}
     </div >
+
   )
 }
 
