@@ -71,7 +71,6 @@ export const createDrinksThunk = (drinkData) => async (dispatch) => {
   return newDrink
 }
 
-
 // delete drink thunk
 export const deleteDrinkThunk = (id) => async (dispatch) => {
   const response = await fetch(`/api/drinks/${id}`, { method: "DELETE" })
