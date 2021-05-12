@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { useHistory } from "react-router-dom"
-import { deleteDrinkThunk } from "../../store/drinks"
+import { getDrinksThunk, deleteDrinkThunk, showForm } from "../../store/drinks"
 
 import "./DrinkCard.css"
 
@@ -18,17 +18,19 @@ const DrinkCard = (props) => {
     }
   }
 
-  const deleteDrink = (e) => {
-    e.preventDefault()
-    history.push("/")
-    dispatch(deleteDrinkThunk(e.target.id))
+  const handleClick = async (id) => {
+    // preventDefault()
+    console.log(id, "--------------------------")
+    await dispatch(deleteDrinkThunk(id))
+    await dispatch(showForm({ showForm: false, key: id }))
+    dispatch(getDrinksThunk())
   }
 
   const checkIfUserCreated = (drink) => {
     if (drink.authorId === userId) {
       return (
         <div>
-          <button onClick={deleteDrink}>X</button>
+          <button onClick={() => handleClick(drink.id)}>X</button>
         </div>
       )
     }

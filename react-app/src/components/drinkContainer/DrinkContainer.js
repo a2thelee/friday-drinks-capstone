@@ -1,20 +1,25 @@
 import React, { useState } from "react"
 import { Modal } from "../../context/Modal"
 import DrinkCard from "../drinkCard/DrinkCard"
+import { showForm } from "../../store/drinks"
+import { useDispatch } from "react-redux"
 
 import "./DrinkContainer.css"
 
 const DrinkContainer = ({ drink }) => {
-  const [showModal, setShowModal] = useState(false)
+  const dispatch = useDispatch()
+  const [showModal, setShowModal] = useState(drink.show)
 
-
-  const modalClose = (event) => {
+  const modalClose = async (event) => {
     event.stopPropagation()
-    setShowModal(false)
+    await dispatch(showForm({ showForm: false, key: drink.id }))
+    setShowModal(drink.show)
+    // dispatch(showForm())
   }
 
-  const modalOpen = () => {
-    setShowModal(true)
+  const modalOpen = async () => {
+    await dispatch(showForm({ showForm: true, key: drink.id }))
+    setShowModal(drink.show)
   }
 
   return (
@@ -23,7 +28,7 @@ const DrinkContainer = ({ drink }) => {
       className="single-drink-container"
       key={drink.id}
       onClick={modalOpen}
-    >{showModal && (
+    >{showModal && drink.show && (
       <Modal onClose={modalClose}>
         <DrinkCard drink={drink} />
       </Modal>

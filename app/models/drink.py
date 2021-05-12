@@ -24,5 +24,6 @@ class Drink(db.Model):
             "photo_url": self.photo_url,
             "instructions": self.instructions,
             "authorId": self.authorId,
-            "favorites": self.favorites
+            "favorites": self.favorites,
+            "show": False
         }
