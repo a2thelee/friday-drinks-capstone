@@ -4,6 +4,7 @@ const GET_DRINKS = "drinks/GET_DRINKS"
 const GET_ONE_DRINK = "drinks/GET_ONE_DRINK"
 const CREATE_DRINK = "drinks/CREATE_DRINK"
 const DELETE_DRINK = "drinks/DELETE_DRINK"
+const SHOW_FORM = "drinks/SHOW_FORM"
 
 const getDrinks = (drinks) => ({
   type: GET_DRINKS,
@@ -22,6 +23,11 @@ const deleteDrink = () => ({
 const getOneDrink = (drink) => ({
   type: GET_ONE_DRINK,
   payload: drink
+})
+
+export const showForm = (visibility) => ({
+  type: SHOW_FORM,
+  payload: visibility
 })
 
 //*************** THUNK ACTION CREATORS ************************ */
@@ -114,8 +120,12 @@ const drinksReducer = (drinks = initialState, action) => {
     case DELETE_DRINK:
       return drinks;
 
+    case SHOW_FORM:
+      drinks[action.payload.key].show = action.payload.showForm
+      return { ...drinks }
+
     default:
-      return drinks;
+      return drinks
   }
 }
 
