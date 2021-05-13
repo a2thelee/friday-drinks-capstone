@@ -2,9 +2,8 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  /* border-bottom: 5px solid; */
   position: fixed;
   list-style: none;
   width: 100%;
-  background-color: white;
+  /* background-color: white; */
 }
