@@ -1,8 +1,10 @@
+from _typeshed import FileDescriptor
 from flask import Blueprint, jsonify, request
 from app.models import Drink
 from app.models import db, Ingredient
 from app.awsupload import upload_file_to_s3, allowed_file, get_unique_filename
 from flask_login import login_required
+from sqlalchemy import desc, asc
 
 drink_routes = Blueprint('drinks', __name__)
 
@@ -10,7 +12,7 @@ drink_routes = Blueprint('drinks', __name__)
 # get all drinks route. WORKS
 @drink_routes.route('/')
 def all_drinks():
-  drinks = Drink.query.all()
+  drinks = Drink.query.order_by(desc(Drink.id)).all()
   return {'drinks': [drink.to_dict() for drink in drinks]}
 
 # upload file to AWS bucket and returns back a url. WORKS
