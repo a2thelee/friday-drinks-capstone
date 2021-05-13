@@ -43,7 +43,7 @@ const LoginForm = () => {
         <div>
           <label htmlFor="email">Email</label>
           <input
-            classname="login-input"
+            className="login-input"
             name="email"
             type="text"
             placeholder="Email"
