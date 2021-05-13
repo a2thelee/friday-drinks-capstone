@@ -1,12 +1,17 @@
 import React from 'react';
 import { useSelector } from 'react-redux'
-import { NavLink } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
 import LogoutButton from '../auth/LogoutButton';
 
 import "./NavBar.css"
 
 const NavBar = () => {
+  const history = useHistory()
   const user = useSelector(state => state.session.user)
+
+  const createRedirect = () => {
+    history.push("/create_drinks")
+  }
 
   let userId;
 
@@ -22,7 +27,7 @@ const NavBar = () => {
             <NavLink to={`/user/${userId}`} exact={true} className="profile-navlink">Profile</NavLink>
           </li>
           <li>
-            <button className="create-drink-button">Create a Drink/</button>
+            <button className="create-drink-button" onClick={() => createRedirect()}>Create a Drink/</button>
           </li>
           <li>
             <LogoutButton />
