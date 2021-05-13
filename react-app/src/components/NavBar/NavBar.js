@@ -73,7 +73,7 @@ const NavBar = () => {
       </div>
       {isLoggedIn()}
       {isLoggedOut()}
-      <div className="searchBarContainer">
+      {/* <div className="searchBarContainer">
         <form className="searchBar" onSubmit={(e) => handleSubmit(e)}>
           <input
             value={drink}
@@ -81,64 +81,42 @@ const NavBar = () => {
             placeholder="Look for a Drink"
             onChange={(e) => setDrink(e.target.value)}
           />
+          {drinksList.filter((item) => {
+            if (drink === "") {
+              return item
+            } else if (item.name.toLowerCase().includes(drink.toLowerCase())) {
+              return item
+            }
+          }).map((drink) => {
+            return (
+              <div
+                key={drink.id}>
+                <p>{drink}</p>
+              </div>
+            )
+          })}
         </form>
-      </div>
+      </div> */}
     </nav>
   );
 }
 
 export default NavBar;
 
-
-{/* <div className="searchBarContainer">
-          <li>
-            <form className="searchBar" onSubmit={(e) => handleSubmit(e)}>
-              <input
-                value={location}
-                type="text"
-                placeholder="Search by State..."
-                onChange={(e) => setLocation(e.target.value)}
-              />
-              {uniqueArray.length ?
-                uniqueArray.map((val, key) => {
-                  console.log('UArray', uniqueArray)
-                  return (
-                    <div className="searchedList" key={key}>
-                      <NavLink to={{
-                        pathname: "/searchResults",
-                        state: {
-                          val: val
-                        },
-                      }} onClick={e => handleSubmit(e)}>
-                        {val}
-                      </NavLink>
-                    </div>
-                  )
-                })
-                : null}
-            </form>
-          </li>
-        </div>
-        {hideLoginSignUp()}
-        <div className="isLoggedIn">
-          {isLoggedIn()}
-        </div> */}
-
-
-        // ingredientsList.filter((item) => {
-        //     if (ingredient === "") {
-        //       return item
-        //     } else if (item.name.toLowerCase().includes(ingredient.toLowerCase())) {
-        //       return item
-        //     }
-        //   }).map((ingredient) => {
-        //     return (
-        //       <div data-ingredient-id={ingredient.id}
-        //         key={ingredient.id}
-        //         className="ingredients-input-list"
-        //         onClick={ingredientSubmit}>
-        //         <p>{ingredient.name}</p>
-        //       </div>
-        //     )
-        //   })}
-        // </div>
+// ingredientsList.filter((item) => {
+//   if (ingredient === "") {
+//     return item
+//   } else if (item.name.toLowerCase().includes(ingredient.toLowerCase())) {
+//     return item
+//   }
+// }).map((ingredient) => {
+//   return (
+//     <div data-ingredient-id={ingredient.id}
+//       key={ingredient.id}
+//       className="ingredients-input-list"
+//       onClick={ingredientSubmit}>
+//       <p>{ingredient.name}</p>
+//     </div>
+//   )
+// })}
+//         </div >
