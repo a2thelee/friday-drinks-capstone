@@ -89,7 +89,7 @@ function CreateDrinkForm() {
 
           {ingredientsList.filter((item) => {
             if (ingredient === "") {
-              return item
+              return ""
             } else if (item.name.toLowerCase().includes(ingredient.toLowerCase())) {
               return item
             }
