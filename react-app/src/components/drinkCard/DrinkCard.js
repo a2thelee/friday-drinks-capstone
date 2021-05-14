@@ -6,7 +6,7 @@ import { getDrinksThunk, deleteDrinkThunk, showForm } from "../../store/drinks"
 import "./DrinkCard.css"
 
 const DrinkCard = (props) => {
-  const userId = useSelector(state => state.session.user.id)
+  const userId = useSelector(state => state.session.user?.id)
   const dispatch = useDispatch()
   const history = useHistory()
 
