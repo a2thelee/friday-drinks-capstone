@@ -111,7 +111,7 @@ def seed_drinks():
     ),
     Drink(name="Royal Gin Fizz", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/pe1x1c1504735672.jpg", instructions="2oz gin, juice of 1/2 lemon, 1tsp powdered sugar, egg white, carbonated water. Shake all ingredients (except carbonated water) with ice and strain into a highball glass over two ice cubes. Fill with carbonated water, stir, and serve.",
     ),
-    Drink(name="Gin Basil Smash", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/jqh2141572807327.jpg", instructions="2oz gin, 1/2oz lemon juice, 1/2oz sugar syrup, basil. Muddle Basil leaves (~ 10) with Suggar Syrup in a shaker. Add Gin an Lemon Juice.\r\nFilter and serve in a tumbler with ice",
+    Drink(name="Gin Basil Smash", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/jqh2141572807327.jpg", instructions="2oz gin, 1/2oz lemon juice, 1/2oz sugar syrup, basil. Muddle Basil leaves (~ 10) with Sugar Syrup in a shaker. Add Gin an Lemon Juice.\r\nFilter and serve in a tumbler with ice",
     ),
     Drink(name="Abbey Martini", isAlcoholic=True, photo_url="https://www.thecocktaildb.com/images/media/drink/2mcozt1504817403.jpg", instructions="2 shots gin, 1 shot sweet vermouth, 1 shot orange juice, 3 dashes angostura bitters. Put all ingredients into a shaker and mix, then strain contents into a chilled cocktail glass."
     ),
