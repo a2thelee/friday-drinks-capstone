@@ -40,7 +40,7 @@ const DrinkContainer = ({ drink }) => {
           alt="drink-pic" />
       </div>
       <div className="drink-text-div">
-        <p>{drink.name}</p>
+        <p className="drink-container-name">{drink.name}</p>
       </div>
     </div>
   )

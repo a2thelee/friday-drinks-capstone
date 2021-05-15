@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin: 40px;
 }
 
 .drink-photo {
@@ -14,9 +15,14 @@
   max-width: 20%;
   border: 1px solid;
   border-radius: 5px;
-  /* margin-top: 25px; */
+  margin: 15px;
+  box-shadow: 0px 4px 12px;
 }
 
 .drink-text-div {
   width: 200px;
+}
+
+.drink-container-name {
+  text-align: center;
 }
