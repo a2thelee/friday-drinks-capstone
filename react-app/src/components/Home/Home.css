@@ -17,12 +17,18 @@
   border-radius: 5px;
   margin: 15px;
   box-shadow: 0px 4px 12px;
+  background-color:#f8f5f1;
 }
 
 .drink-text-div {
   width: 200px;
+  font-family: Helvetica;
 }
 
 .drink-container-name {
   text-align: center;
+}
+
+body {
+  background-color: #a1cae2
 }
