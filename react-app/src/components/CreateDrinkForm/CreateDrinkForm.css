@@ -23,3 +23,9 @@
 .create-drink-form [type="text"]:focus {
 	outline:none;
 }
+
+
+.user-ingredients-list {
+	position: absolute;
+	right: 15%;
+}
