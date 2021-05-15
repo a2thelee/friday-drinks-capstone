@@ -2,10 +2,9 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  position: fixed;
+  /* position: fixed; */
   list-style: none;
   width: 100%;
-  /* margin-bottom: 2200px; */
   /* background-color: white; */
 }
 
@@ -15,9 +14,9 @@
   top: 5%;
 }
 
-.searchBar {
+/* .searchBar {
   position: fixed;
-}
+} */
 
 .drinks-input-list {
   background-color: white;
@@ -27,13 +26,10 @@
   background-color: white;
 }
 
-/* .navbar-container {
-  display: flex;
+.navbar-container {
+  /* display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  position: fixed;
+  justify-content: space-around; */
   list-style: none;
-  width: 100%;
-  margin-bottom: 2200px;
-  background-color: white;
-} */
+  background-color: #f4f9f9
+}
