@@ -9,16 +9,14 @@ import "./NavBar.css"
 
 const NavBar = () => {
   const history = useHistory()
-  const user = useSelector(state => state.session.user)
-  const drinksList = Object.values(state => state.drinks)
   const dispatch = useDispatch()
+  const user = useSelector(state => state.session.user)
+  const drinksList = Object.values(useSelector((state => state.drinks)))
   const [drink, setDrink] = useState("")
 
   useEffect(() => {
     dispatch(getDrinksThunk())
   }, [dispatch])
-
-  console.log(drinksList, "drinkslist -----------------------")
 
   const createRedirect = () => {
     history.push("/create_drinks")
@@ -85,8 +83,9 @@ const NavBar = () => {
 
         <NavLink to="/">Friday Drinks</NavLink>
 
-        <div>
+        <div className="searchbar-div">
           <input
+            className="searchBar"
             type="text"
             placeholder="Search by Drink"
             value={drink}
@@ -103,7 +102,7 @@ const NavBar = () => {
               <div
                 key={drink.id}
                 className="drinks-input-list">
-                <p>{drink.name}</p>
+                <p className="search-offer">{drink.name}</p>
               </div>
             )
           })}
