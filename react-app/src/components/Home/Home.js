@@ -13,54 +13,25 @@ import './Home.css'
 function Home() {
   const dispatch = useDispatch()
   const drinks = useSelector(state => state.drinks)
-  // const favorites = useSelector(state => state.favorites)
+  const [drink, setDrink] = useState()
+  let item;
 
 
-  useEffect(() => {
-    dispatch(getDrinksThunk())
-    // dispatch(getFavoriteDrinksThunk())
-    // dispatch(getIngredientsThunk())
-    // dispatch(getDrinkIngredientsThunk())
-  }, [dispatch])
-
-  //is a drink alcoholic?
-  // const drinkAlcoholic = (drink) => {
-  //   if (drink.isAlcoholic) {
-  //     return "Alcoholic"
-  //   } else {
-  //     return "Non-Alcoholic"
-  //   }
-  // }
-
+  // useEffect(() => {
+  //   dispatch(getDrinksThunk())
+  // }, [dispatch])
 
 
   return (
-    <div className="drinks-container">
-      {Object.values(drinks).map(drink => {
-        return (
-          <DrinkContainer key={drink.id} drink={drink} />
-          // <div
-          //   className="single-drink-container"
-          //   key={drink.id}
-          //   onClick={() => setShowModal(true)}
-          // >{showModal && (
-          //   <Modal onClose={() => setShowModal(false)}>
-          //     <DrinkCard drink={drink} />
-          //   </Modal>
-          // )}
-          //   <div className="drink-photo-container">
-          //     <img
-          //       src={drink.photo_url}
-          //       className="drink-photo"
-          //       alt="drink-pic" />
-          //   </div>
-          //   <div className="drink-text-div">
-          //     <p>{drink.name}</p>
-          //   </div>
-          // </div>
-        )
-      })}
-    </div>
+    <>
+      <div className="drinks-container">
+        {Object.values(drinks).map(drink => {
+          return (
+            <DrinkContainer key={drink.id} drink={drink} />
+          )
+        })}
+      </div>
+    </>
   )
 }
 

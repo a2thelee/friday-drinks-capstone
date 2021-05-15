@@ -9,6 +9,24 @@
   /* background-color: white; */
 }
 
+.searchbar-div{
+  position: absolute;
+  left: 46%;
+  top: 5%;
+}
+
+.searchBar {
+  position: fixed;
+}
+
+.drinks-input-list {
+  background-color: white;
+}
+
+.search-offer {
+  background-color: white;
+}
+
 /* .navbar-container {
   display: flex;
   flex-direction: row;
