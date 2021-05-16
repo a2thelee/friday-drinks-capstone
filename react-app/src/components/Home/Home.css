@@ -17,7 +17,7 @@
   border-radius: 5px;
   margin: 15px;
   box-shadow: 0px 4px 12px #BEE3DB;
-  background-color:#f8f5f1;
+  background-color:#f8ede3;
   cursor: pointer;
 }
 
@@ -28,6 +28,9 @@
 
 .drink-container-name {
   text-align: center;
+  font-family: "Allan";
+  font-size: 25px;
+  color: #4b778d
 }
 
 body {

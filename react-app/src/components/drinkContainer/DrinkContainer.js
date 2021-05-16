@@ -4,11 +4,9 @@ import DrinkCard from "../drinkCard/DrinkCard"
 import { showForm } from "../../store/drinks"
 import { useDispatch } from "react-redux"
 
-import "./DrinkContainer.css"
-
 const DrinkContainer = ({ drink }) => {
   const dispatch = useDispatch()
-  const [showModal, setShowModal] = useState(drink.show)
+  const [showModal, setShowModal] = useState(drink?.show)
 
   const modalClose = async (event) => {
     event.stopPropagation()
@@ -26,7 +24,7 @@ const DrinkContainer = ({ drink }) => {
 
     <div
       className="single-drink-container"
-      key={drink.id}
+      key={drink?.id}
       onClick={modalOpen}
     >{showModal && drink.show && (
       <Modal onClose={modalClose}>
@@ -35,12 +33,12 @@ const DrinkContainer = ({ drink }) => {
     )}
       <div className="drink-photo-container">
         <img
-          src={drink.photo_url}
+          src={drink?.photo_url}
           className="drink-photo"
           alt="drink-pic" />
       </div>
       <div className="drink-text-div">
-        <p className="drink-container-name">{drink.name}</p>
+        <p className="drink-container-name">{drink?.name}</p>
       </div>
     </div>
   )

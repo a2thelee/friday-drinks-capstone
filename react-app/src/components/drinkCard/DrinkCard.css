@@ -1,6 +1,6 @@
 .drinkcard-instructions {
   width: 500px;
-  font-family: Helvetica;
+  font-family: "Allan";
 }
 
 
@@ -9,5 +9,9 @@
 }
 
 .drinkcard-container p {
-  font-family: Helvetica;
+  font-family: "Allan";
+}
+
+.drinkcard-container {
+  background-color: #d8e3e7
 }

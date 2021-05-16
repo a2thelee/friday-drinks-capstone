@@ -17,9 +17,9 @@ function Home() {
   let item;
 
 
-  // useEffect(() => {
-  //   dispatch(getDrinksThunk())
-  // }, [dispatch])
+  useEffect(() => {
+    dispatch(getDrinksThunk())
+  }, [dispatch])
 
 
   return (
@@ -27,7 +27,7 @@ function Home() {
       <div className="drinks-container">
         {Object.values(drinks).map(drink => {
           return (
-            <DrinkContainer key={drink.id} drink={drink} />
+            <DrinkContainer key={drink?.id} drink={drink} />
           )
         })}
       </div>
