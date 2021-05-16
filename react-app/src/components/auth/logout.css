@@ -1,0 +1,6 @@
+/* this is terrible practice and only applies to the logout button */
+
+.logout-button {
+  position: absolute;
+  margin-left: 1500px;
+}

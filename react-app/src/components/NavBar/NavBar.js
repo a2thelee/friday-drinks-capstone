@@ -34,12 +34,12 @@ const NavBar = () => {
         <>
           <div className="logged-in-container">
             <li>
-              <NavLink to={`/user/${userId}`} exact={true} className="profile-navlink">Profile</NavLink>
+              <NavLink to={`/user/${userId}`} exact={true} className="navbar-navlink">Profile</NavLink>
             </li>
           </div>
           <div>
             <li>
-              <button className="create-drink-button" onClick={createRedirect}>Create a Drink/</button>
+              <button className="create-drink-button" onClick={createRedirect}>Create a Drink</button>
             </li>
           </div>
           <div>
@@ -58,12 +58,12 @@ const NavBar = () => {
         <>
           <div className="logged-out-container">
             <li>
-              <NavLink to="/login" exact={true} activeClassName="active">
+              <NavLink className="navbar-navlink" to="/login" exact={true} activeClassName="active">
                 Login
           </NavLink>
             </li>
             <li>
-              <NavLink to="/sign-up" exact={true} activeClassName="active">
+              <NavLink className="navbar-navlink" to="/sign-up" exact={true} activeClassName="active">
                 Sign Up
           </NavLink>
             </li>
@@ -81,7 +81,11 @@ const NavBar = () => {
         {isLoggedIn()}
         {isLoggedOut()}
 
-        <NavLink to="/">Friday Drinks</NavLink>
+        <NavLink
+          className="logo"
+          to="/">
+          Friday Drinks
+          </NavLink>
 
         <div className="searchbar-div">
           <input
