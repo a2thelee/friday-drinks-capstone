@@ -13,6 +13,7 @@ const NavBar = () => {
   const user = useSelector(state => state.session.user)
   const drinksList = Object.values(useSelector((state => state.drinks)))
   const [drink, setDrink] = useState("")
+  const [searchTerm, setSearchTerm] = useState("")
 
   useEffect(() => {
     dispatch(getDrinksThunk())
@@ -98,15 +99,22 @@ const NavBar = () => {
           {drinksList.filter((item) => {
             if (drink === "") {
               return ""
-            } else if (item.name.toLowerCase().includes(drink.toLowerCase())) {
+            } else if (item?.name?.toLowerCase().includes(drink?.toLowerCase())) {
               return item
             }
           }).map((drink) => {
             return (
               <div
                 key={drink.id}
-                className="drinks-input-list">
-                <p className="search-offer">{drink.name}</p>
+                className="searchList">
+                <NavLink
+                  key={drink.id}
+                  to={`/drinks/${drink.id}`}
+                  className="search-offer"
+                // onClick={setSearchTerm("")}
+                >
+                  {drink.name}
+                </NavLink>
               </div>
             )
           })}

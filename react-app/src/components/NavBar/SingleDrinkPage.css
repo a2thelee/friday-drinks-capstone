@@ -1,0 +1,17 @@
+.searched-drink-instructions {
+  width: 500px;
+  font-family: Helvetica;
+}
+
+
+.searched-drink-photo{
+  max-width: 500px;
+}
+
+.searched-drink-container {
+  font-family: Helvetica;
+  background-color: white;
+  width: 500px;
+  position: absolute;
+  margin-left: 37%;
+}

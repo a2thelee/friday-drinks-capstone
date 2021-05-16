@@ -8,6 +8,7 @@ import ProtectedRoute from "./components/auth/ProtectedRoute";
 import UsersList from "./components/UsersList";
 import User from "./components/User";
 import CreateDrinkForm from "./components/CreateDrinkForm/CreateDrinkForm.js"
+import SingleDrinkPage from "./components/NavBar/SingleDrinkPage"
 
 import Home from "./components/Home/Home"
 // import { authenticate } from "./services/auth";
@@ -55,6 +56,10 @@ function App() {
 
         <Route path="/create_drinks">
           <CreateDrinkForm />
+        </Route>
+
+        <Route path="/drinks/:id">
+          <SingleDrinkPage />
         </Route>
 
       </Switch>
