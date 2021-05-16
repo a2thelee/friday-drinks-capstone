@@ -55,7 +55,7 @@ const DrinkCard = (props) => {
       </div>
 
       <div className="drinkcard-contains-alcohol">
-        <p>{drinkAlcoholic(props.drink)}</p>
+        <p>Alcoholic? {drinkAlcoholic(props.drink)}</p>
       </div>
 
       <div className="drinkcard-ingredients">

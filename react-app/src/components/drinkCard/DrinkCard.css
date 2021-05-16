@@ -1,8 +1,13 @@
 .drinkcard-instructions {
   width: 696px;
+  font-family: Helvetica;
 }
 
 
 .drinkcard-photo{
   max-width: 696px;
+}
+
+.drinkcard-container p {
+  font-family: Helvetica;
 }

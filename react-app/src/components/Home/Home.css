@@ -18,6 +18,7 @@
   margin: 15px;
   box-shadow: 0px 4px 12px;
   background-color:#f8f5f1;
+  cursor: pointer;
 }
 
 .drink-text-div {
@@ -30,5 +31,8 @@
 }
 
 body {
-  background-color: #a1cae2
+  /* background-color: #a7bbc7; */
+  /* background-color: #f2dac3; */
+  /* background-color: #f1ca89 */
+  background-color: #555B6E
 }
