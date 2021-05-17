@@ -21,7 +21,8 @@
 
 #modal-content {
   position: absolute;
-  background-color: #d8e3e7;
+  /* background-color: #d8e3e7; */
   border-radius: 5px;
   padding: 35px;
+  background: linear-gradient(0.25turn, #d8e3e7, #f8ede3, #f7f3e9);
 }
