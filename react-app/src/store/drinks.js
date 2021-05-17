@@ -33,7 +33,7 @@ export const showForm = (visibility) => ({
 //*************** THUNK ACTION CREATORS ************************ */
 
 export const getDrinksThunk = () => async (dispatch) => {
-  const response = await fetch('api/drinks')
+  const response = await fetch('/api/drinks/')
   if (!response.ok) {
     throw response
   }
@@ -93,7 +93,7 @@ export const getOneDrinkThunk = (id) => async (dispatch) => {
   }
 
   const drink = await response.json()
-  dispatch(getOneDrink(drink))
+  // dispatch(getOneDrink(drink))
 }
 
 // ******************* Reducer ********************************/

@@ -54,11 +54,11 @@ function App() {
           <Home />
         </Route>
 
-        <Route path="/create_drinks">
+        <Route path="/create_drinks" exact={true}>
           <CreateDrinkForm />
         </Route>
 
-        <Route path="/drinks/:id">
+        <Route path="/drinks/:id" exact={true}>
           <SingleDrinkPage />
         </Route>
 
