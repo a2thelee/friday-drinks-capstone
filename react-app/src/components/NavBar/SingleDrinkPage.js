@@ -10,6 +10,12 @@ const SingleDrinkPage = () => {
   const { id } = useParams()
   const drinks = useSelector(state => state.drinks)
 
+  const ingredients = drinks[id]?.ingredients
+
+  const siftedIngredients = ingredients?.map((ingredient) => {
+    return ingredient?.name
+  })
+
 
   useEffect(() => {
     dispatch(getDrinksThunk())
@@ -32,6 +38,10 @@ const SingleDrinkPage = () => {
 
       <div className="searched-drink-alcoholic">
         <p>Alcoholic/Non-Alcoholic? <strong>{drinks[id].isAlcoholic}</strong></p>
+      </div>
+
+      <div className="searched-drink-ingredients">
+        <p>Ingredients: <strong>{siftedIngredients.join(", ")}</strong></p>
       </div>
 
       <div className="searched-drink-instructions">

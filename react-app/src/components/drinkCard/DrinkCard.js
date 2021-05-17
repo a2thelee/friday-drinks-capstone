@@ -10,6 +10,15 @@ const DrinkCard = (props) => {
   const dispatch = useDispatch()
   const history = useHistory()
 
+  const ingredients = props.drink.ingredients
+
+
+  const siftedIngredients = ingredients.map((ingredient) => {
+    return ingredient.name
+  })
+
+  console.log(siftedIngredients.join(", "), "INGREDIENTS -----------------")
+
   const drinkAlcoholic = (drink) => {
     if (drink.isAlcoholic) {
       return "Alcoholic"
@@ -58,10 +67,9 @@ const DrinkCard = (props) => {
         <p>Alcoholic/Non-Alcoholic? <strong>{drinkAlcoholic(props.drink)}</strong></p>
       </div>
 
-      {/* <div className="drinkcard-ingredients">
-        {console.log(props.drink.ingredient)}
-        {props.drink.ingredients}
-      </div> */}
+      <div className="drinkcard-ingredients">
+        <p>Ingredients: <strong>{siftedIngredients.join(", ")}</strong></p>
+      </div>
 
       <div className="drinkcard-instructions">
         <label><strong>Instructions</strong></label>
