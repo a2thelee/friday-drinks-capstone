@@ -111,7 +111,7 @@ const NavBar = () => {
                   key={drink.id}
                   to={`/drinks/${drink.id}`}
                   className="search-offer"
-                // onClick={setSearchTerm("")}
+                  onClick={() => setDrink("")}
                 >
                   {drink.name}
                 </NavLink>

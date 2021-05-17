@@ -25,5 +25,6 @@ class Drink(db.Model):
             "instructions": self.instructions,
             "authorId": self.authorId,
             "favorites": self.favorites,
-            "show": False
+            "show": False,
+            "ingredients": [ingredient.to_dict() for ingredient in self.ingredients]
         }

@@ -44,9 +44,8 @@ function CreateDrinkForm() {
   }
 
   //ingredient submission handler. sends ingredient IDs to thunk to make querying easier on the back end. WORKS!
-  const ingredientSubmit = (e) => {
-    e.preventDefault();
-    ingredientNames.push(ingredient)
+  const ingredientSubmit = (e, ingredient) => {
+    ingredientNames.push(ingredient.name)
     setIngredients([...ingredients, +e.currentTarget.dataset.ingredientId])
     setIngredient("")
   }
@@ -113,7 +112,7 @@ function CreateDrinkForm() {
                 <div data-ingredient-id={ingredient.id}
                   key={ingredient.id}
                   className="ingredients-input-list"
-                  onClick={ingredientSubmit}>
+                  onClick={(e) => ingredientSubmit(e, ingredient)}>
                   <p>{ingredient.name}</p>
                 </div>
               )

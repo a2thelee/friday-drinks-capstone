@@ -51,17 +51,17 @@ const DrinkCard = (props) => {
 
       <div className="drinkcard-name-div">
         <p>Drink Name: <strong>{props.drink.name}</strong></p>
-        <p># of Favorites: <stong>{props.drink.favorites}</stong> </p>
+        <p># of Favorites: <strong>{props.drink.favorites}</strong> </p>
       </div>
 
       <div className="drinkcard-contains-alcohol">
         <p>Alcoholic/Non-Alcoholic? <strong>{drinkAlcoholic(props.drink)}</strong></p>
       </div>
 
-      <div className="drinkcard-ingredients">
+      {/* <div className="drinkcard-ingredients">
         {console.log(props.drink.ingredient)}
         {props.drink.ingredients}
-      </div>
+      </div> */}
 
       <div className="drinkcard-instructions">
         <label><strong>Instructions</strong></label>
