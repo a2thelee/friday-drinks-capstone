@@ -10,7 +10,7 @@
 
 .searched-drink-container {
   font-family: Helvetica;
-  background-color: white;
+  background: linear-gradient(0.25turn, #d8e3e7, #f8ede3, #f7f3e9);
   width: 500px;
   position: absolute;
   margin-left: 37%;
