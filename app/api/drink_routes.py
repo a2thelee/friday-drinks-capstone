@@ -2,10 +2,14 @@ from flask import Blueprint, jsonify, request
 from app.models import Drink
 from app.models import db, Ingredient
 from app.awsupload import upload_file_to_s3, allowed_file, get_unique_filename
+import os
 from flask_login import login_required
 
 drink_routes = Blueprint('drinks', __name__)
 
+# print(os.environ.get("S3_SECRET_KEY"), "s3secret key-------------")
+# print(os.environ.get("S3_KEY"), "s3-key-----------------")
+# print(os.environ.get("S3_BUCKET"), "bucket-----------------------------")
 
 # get all drinks route. WORKS
 @drink_routes.route('/')
