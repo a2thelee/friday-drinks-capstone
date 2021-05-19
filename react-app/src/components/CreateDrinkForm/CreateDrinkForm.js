@@ -72,6 +72,7 @@ function CreateDrinkForm() {
               type="text"
               value={name}
               onChange={e => setName(e.target.value)}
+              required
             />
           </div>
 
@@ -89,6 +90,7 @@ function CreateDrinkForm() {
             <input
               type="file"
               onChange={addPhoto}
+              required
             />
           </div>
 
@@ -126,6 +128,7 @@ function CreateDrinkForm() {
               placeholder="measurements and directions"
               required
               value={instructions}
+              required
               onChange={e => setInstructions(e.target.value)} />
           </div>
         </form>
