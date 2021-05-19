@@ -13,13 +13,20 @@ import './Home.css'
 function Home() {
   const dispatch = useDispatch()
   const drinks = useSelector(state => state.drinks)
+  const [loaded, setLoaded] = useState(true)
   const [drink, setDrink] = useState()
   let item;
 
 
   useEffect(() => {
-    dispatch(getDrinksThunk())
+    dispatch(getDrinksThunk()).then(() => {
+      setLoaded(false)
+    })
   }, [dispatch])
+
+  if (loaded) {
+    return <h4>Opening up the bar...</h4>
+  }
 
 
   return (
