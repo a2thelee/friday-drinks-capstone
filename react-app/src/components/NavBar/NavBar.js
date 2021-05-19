@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import LogoutButton from '../auth/LogoutButton';
 import { useHistory } from "react-router-dom"
 import { getDrinksThunk } from "../../store/drinks"
+import { login } from "../../store/session"
 
 import "./NavBar.css"
 
@@ -14,6 +15,8 @@ const NavBar = () => {
   const drinksList = Object.values(useSelector((state => state.drinks)))
   const [drink, setDrink] = useState("")
   const [searchTerm, setSearchTerm] = useState("")
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   useEffect(() => {
     dispatch(getDrinksThunk())
@@ -68,13 +71,21 @@ const NavBar = () => {
                 Sign Up
           </NavLink>
             </li>
+            <li>
+              <button
+                className="demo-button"
+                onClick={async (e) => {
+                  setEmail("demo@aa.io")
+                  setPassword("password")
+                  dispatch(login("demo@aa.io", "password"))
+                }}>Demo User</button>
+            </li>
 
           </div>
         </>
       )
     }
   }
-
 
   return (
     <nav>
