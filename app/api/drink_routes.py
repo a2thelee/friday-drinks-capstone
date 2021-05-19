@@ -3,7 +3,7 @@ from app.models import Drink
 from app.models import db, Ingredient
 from app.awsupload import upload_file_to_s3, allowed_file, get_unique_filename
 import os
-from flask_login import login_required
+from flask_login import login_required, current_user
 
 drink_routes = Blueprint('drinks', __name__)
 
