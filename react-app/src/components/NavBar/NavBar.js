@@ -98,9 +98,11 @@ const NavBar = () => {
           className="logo"
           to="/">
           Friday Drinks
-          </NavLink>
+        </NavLink>
 
-        <p className="navbar-text">It's Always Friday</p>
+
+        <span className="navbar-text">It's Always Friday</span>
+
 
         <div className="searchbar-div">
           <input

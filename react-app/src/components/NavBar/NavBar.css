@@ -58,12 +58,21 @@
 
 .navbar-text{
   position: absolute;
+  float: top;
   font-size: 30px;
   font-family: 'Allan';
-  margin-left: 88%;
+  margin-left: 80%;
   /* color: #89B0AE; */
   color: #555B6E;
-  margin-top: 1%
+  text-shadow:
+  0 0 7px #FFD6BA,
+  0 0 10px #FFD6BA,
+  0 0 21px #FFD6BA,
+  0 0 42px #89b0ae,
+  0 0 82px #89b0ae,
+  0 0 92px #89b0ae,
+  0 0 102px #89b0ae,
+  0 0 151px #89b0ae,
 }
 
 
