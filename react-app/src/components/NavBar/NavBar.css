@@ -47,7 +47,7 @@
   position: absolute;
   font-size: 30px;
   font-family: 'Allan';
-  margin-left: 85%;
+  margin-left: 88%;
   /* color: #89B0AE; */
   color: #555B6E;
   margin-top: 1%
@@ -55,7 +55,10 @@
 
 
 .navbar-navlink {
-  text-decoration: none
+  text-decoration: none;
+  font-family: "Allan";
+  font-size: 20px;
+
 }
 
 #profile-link {
@@ -69,4 +72,12 @@
 
 .search-offer {
   text-decoration: none;
+}
+
+.demo-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: "Allan"
 }
