@@ -17,8 +17,6 @@ const DrinkCard = (props) => {
     return ingredient.name
   })
 
-  console.log(siftedIngredients.join(", "), "INGREDIENTS -----------------")
-
   const drinkAlcoholic = (drink) => {
     if (drink.isAlcoholic) {
       return "Alcoholic"
@@ -29,7 +27,6 @@ const DrinkCard = (props) => {
 
   const handleClick = async (id) => {
     // preventDefault()
-    console.log(id, "--------------------------")
     await dispatch(deleteDrinkThunk(id))
     await dispatch(showForm({ showForm: false, key: id }))
     dispatch(getDrinksThunk())
