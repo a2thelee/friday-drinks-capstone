@@ -43,6 +43,16 @@
   color: #555B6E
 }
 
+.navbar-text{
+  position: absolute;
+  font-size: 30px;
+  font-family: 'Allan';
+  margin-left: 85%;
+  /* color: #89B0AE; */
+  color: #555B6E;
+  margin-top: 1%
+}
+
 
 .navbar-navlink {
   text-decoration: none

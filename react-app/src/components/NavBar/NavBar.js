@@ -100,6 +100,8 @@ const NavBar = () => {
           Friday Drinks
           </NavLink>
 
+        <p className="navbar-text">It's Always Friday</p>
+
         <div className="searchbar-div">
           <input
             className="searchBar"
@@ -131,7 +133,6 @@ const NavBar = () => {
             )
           })}
         </div>
-
       </div>
     </nav>
   );
