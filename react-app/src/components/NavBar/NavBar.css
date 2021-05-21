@@ -17,7 +17,7 @@
 
 .create-drink-button {
   position: absolute;
-  margin-left: 500px;
+  margin-left: 25%;
 }
 
 
@@ -46,6 +46,11 @@
 
 .navbar-navlink {
   text-decoration: none
+}
+
+#profile-link {
+  margin-left: 30%;
+  margin-top: 2%;
 }
 
 .search-offer {

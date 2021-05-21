@@ -38,7 +38,8 @@ const NavBar = () => {
         <>
           <div className="logged-in-container">
             <li>
-              <NavLink to={`/user/${userId}`} exact={true} className="navbar-navlink">Profile</NavLink>
+              <NavLink to={`/user/${userId}`} exact={true} className="navbar-navlink"
+                id="profile-link">Profile</NavLink>
             </li>
           </div>
           <div>
