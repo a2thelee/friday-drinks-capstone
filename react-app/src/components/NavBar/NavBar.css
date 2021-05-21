@@ -23,6 +23,8 @@
   border-radius: 5px;
   outline: none;
   transition: ease-out;
+  font-family: "Allan";
+  font-size: 20px
 }
 
 .create-drink-button:hover{
