@@ -68,11 +68,6 @@ const NavBar = () => {
           </NavLink>
             </li>
             <li>
-              <NavLink className="navbar-navlink" to="/sign-up" exact={true} activeClassName="active">
-                Sign Up
-          </NavLink>
-            </li>
-            <li>
               <button
                 className="demo-button"
                 onClick={async (e) => {
@@ -80,6 +75,11 @@ const NavBar = () => {
                   setPassword("password")
                   dispatch(login("demo@aa.io", "password"))
                 }}>Demo User</button>
+            </li>
+            <li>
+              <NavLink className="navbar-navlink" to="/sign-up" exact={true} activeClassName="active">
+                Sign Up
+          </NavLink>
             </li>
 
           </div>
