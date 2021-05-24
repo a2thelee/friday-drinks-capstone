@@ -26,13 +26,10 @@ function User() {
     <div>
       <ul>
         <li>
-          <strong>User Id</strong> {userId}
+          <strong>Username:</strong> {user.username}
         </li>
         <li>
-          <strong>Username</strong> {user.username}
-        </li>
-        <li>
-          <strong>Email</strong> {user.email}
+          <strong>Email:</strong> {user.email}
         </li>
       </ul>
       <div>
