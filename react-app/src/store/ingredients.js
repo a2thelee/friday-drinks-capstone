@@ -11,7 +11,7 @@ const getIngredients = (ingredients) => ({
 // ************************** THUNK ACTION CREATORS **************************
 
 export const getIngredientsThunk = () => async (dispatch) => {
-  const response = await fetch('/api/ingredients')
+  const response = await fetch('/api/ingredients/')
   if (!response.ok) {
     throw response
   }
