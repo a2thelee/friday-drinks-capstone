@@ -5,6 +5,7 @@ import LogoutButton from '../auth/LogoutButton';
 import { useHistory } from "react-router-dom"
 import { getDrinksThunk } from "../../store/drinks"
 import { login } from "../../store/session"
+import { Modal } from "../../context/Modal"
 
 import "./NavBar.css"
 
