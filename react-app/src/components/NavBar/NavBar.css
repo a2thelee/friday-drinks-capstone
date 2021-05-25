@@ -13,6 +13,43 @@
   top: 5%;
 }
 
+.logged-out-button1 {
+  position: absolute;
+  margin-left: 10%;
+  margin-top: 1%;
+  background-color: inherit;
+  box-shadow: inset 0 0 0 0 #555B6E;
+  border-radius: 5px;
+  outline: none;
+  transition: ease-out;
+  font-family: "Allan";
+  font-size: 20px
+}
+
+.logged-out-button1:hover{
+  box-shadow: inset 300px 0 0 0 #555B6E;
+	color: #f4f6ff;
+	cursor: pointer;
+}
+
+.logged-out-button2 {
+  position: absolute;
+  margin-left: 25%;
+  background-color: inherit;
+  box-shadow: inset 0 0 0 0 #555B6E;
+  border-radius: 5px;
+  outline: none;
+  transition: ease-out;
+  font-family: "Allan";
+  font-size: 20px
+}
+
+.logged-out-button2:hover{
+  box-shadow: inset 300px 0 0 0 #555B6E;
+	color: #FFD6BA;
+	cursor: pointer;
+}
+
 .create-drink-button {
   position: absolute;
   margin-left: 25%;
