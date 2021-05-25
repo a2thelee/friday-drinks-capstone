@@ -2,10 +2,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  /* position: fixed; */
   list-style: none;
   width: 100%;
-  /* background-color: white; */
 }
 
 .searchbar-div{
