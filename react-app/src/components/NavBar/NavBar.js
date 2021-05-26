@@ -5,6 +5,9 @@ import LogoutButton from '../auth/LogoutButton';
 import { useHistory } from "react-router-dom"
 import { getDrinksThunk } from "../../store/drinks"
 import { login } from "../../store/session"
+import { Modal } from "../../context/Modal"
+import LoginForm from "../auth/LoginForm"
+import SignUpForm from "../auth/SignUpForm"
 
 import "./NavBar.css"
 
@@ -17,6 +20,9 @@ const NavBar = () => {
   const [searchTerm, setSearchTerm] = useState("")
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const [showModal, setShowModal] = useState(false)
+  let close = document.getElementById("modal-background")
 
   useEffect(() => {
     dispatch(getDrinksThunk())
@@ -63,9 +69,12 @@ const NavBar = () => {
         <>
           <div className="logged-out-container">
             <li>
-              <NavLink className="navbar-navlink" to="/login" exact={true} activeClassName="active">
-                Login
-          </NavLink>
+              <button className="logged-out-button1" onClick={() => setShowModal(true)}>Log in</button>
+              {showModal && (
+                <Modal onClose={() => setShowModal(false)}>
+                  <LoginForm />
+                </Modal>
+              )}
             </li>
             <li>
               <button
@@ -77,9 +86,12 @@ const NavBar = () => {
                 }}>Demo User</button>
             </li>
             <li>
-              <NavLink className="navbar-navlink" to="/sign-up" exact={true} activeClassName="active">
-                Sign Up
-          </NavLink>
+              <button className="logged-out-button2" onClick={() => setShowModal(true)}>Sign Up</button>
+              {showModal && (
+                <Modal onClose={() => setShowModal(false)}>
+                  <SignUpForm />
+                </Modal>
+              )}
             </li>
 
           </div>
