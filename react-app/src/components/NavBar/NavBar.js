@@ -22,6 +22,7 @@ const NavBar = () => {
   const [password, setPassword] = useState("");
 
   const [showModal, setShowModal] = useState(false)
+  const [showLoginModal, setShowLoginModal] = useState(false)
   let close = document.getElementById("modal-background")
 
   useEffect(() => {
@@ -69,9 +70,9 @@ const NavBar = () => {
         <>
           <div className="logged-out-container">
             <li>
-              <button className="logged-out-button1" onClick={() => setShowModal(true)}>Log in</button>
-              {showModal && (
-                <Modal onClose={() => setShowModal(false)}>
+              <button className="logged-out-button1" onClick={() => setShowLoginModal(true)}>Log in</button>
+              {showLoginModal && (
+                <Modal onClose={() => setShowLoginModal(false)}>
                   <LoginForm />
                 </Modal>
               )}
