@@ -72,9 +72,14 @@ export const createDrinksThunk = (drinkData) => async (dispatch) => {
       ingredients
     })
   })
-  const newDrink = await response.json()
-  dispatch(createDrink(newDrink))
-  return newDrink
+
+  if (response.ok) {
+    const newDrink = await response.json()
+    dispatch(createDrink(newDrink))
+  } else {
+    return response
+  }
+  // return newDrink
 }
 
 // delete drink thunk

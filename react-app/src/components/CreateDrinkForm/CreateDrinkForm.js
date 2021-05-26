@@ -29,8 +29,13 @@ function CreateDrinkForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    dispatch(createDrinksThunk({ authorId, name, isAlcoholic, ingredients, instructions, photo }))
-    history.push(`/users/${authorId}`)
+    const response = dispatch(createDrinksThunk({ authorId, name, isAlcoholic, ingredients, instructions, photo }))
+
+    if (response.ok) {
+      history.push(`/users/${authorId}`)
+    } else {
+      window.alert("Pleae fill out the fields")
+    }
   }
 
   //handles checkbox logic for alcoholic or non-alcoholic
