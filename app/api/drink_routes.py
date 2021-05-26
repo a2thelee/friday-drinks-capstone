@@ -67,7 +67,7 @@ def create_drink():
 
 # Delete drink route. WORKS
 @drink_routes.route('/<int:id>', methods=['DELETE'])
-# @login_required
+@login_required
 def delete_drink(id):
   drink = Drink.query.get(id)
   db.session.delete(drink)
