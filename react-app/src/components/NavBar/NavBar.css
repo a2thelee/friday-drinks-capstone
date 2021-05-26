@@ -130,6 +130,7 @@
 
 .search-offer {
   background-color: white;
+  z-index: 1000;
 }
 
 .search-offer {
