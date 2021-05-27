@@ -52,10 +52,20 @@ function CreateDrinkForm() {
 
   //ingredient submission handler. sends ingredient IDs to thunk to make querying easier on the back end. WORKS!
   const ingredientSubmit = (e, ingredient) => {
-    ingredientNames.push(ingredient)
-    setIngredients([...ingredients, +e.currentTarget.dataset.ingredientId])
-    setIngredient("")
+    if (!ingredients.includes(ingredient.id)) {
+      ingredientNames.push(ingredient)
+      setIngredients([...ingredients, +e.currentTarget.dataset.ingredientId])
+      setIngredient("")
+    } else {
+      window.alert("Ingredient Already Added!")
+    }
   }
+
+  // const ingredientSubmit = (e, ingredient) => {
+  //   ingredientNames.push(ingredient)
+  //   setIngredients([...ingredients, +e.currentTarget.dataset.ingredientId])
+  //   setIngredient("")
+  // }
 
   // const displayIngredients = (e) => {
   //   setIngredientNames([...ingredient])
