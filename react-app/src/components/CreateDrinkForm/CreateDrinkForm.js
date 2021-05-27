@@ -27,15 +27,17 @@ function CreateDrinkForm() {
 
   // handles submit to dispatch create drink thunk
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    const response = dispatch(createDrinksThunk({ authorId, name, isAlcoholic, ingredients, instructions, photo }))
+    // const response = dispatch(createDrinksThunk({ authorId, name, isAlcoholic, ingredients, instructions, photo }))
+    await dispatch(createDrinksThunk({ authorId, name, isAlcoholic, ingredients, instructions, photo }))
+    history.push(`/users/${authorId}`)
 
-    if (response.ok) {
-      history.push(`/users/${authorId}`)
-    } else {
-      window.alert("Pleae fill out the fields")
-    }
+    // if (response.ok) {
+    //   history.push(`/users/${authorId}`)
+    // } else {
+    //   window.alert("Pleae fill out the fields")
+    // }
   }
 
   //handles checkbox logic for alcoholic or non-alcoholic
