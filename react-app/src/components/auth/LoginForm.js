@@ -18,6 +18,12 @@ const LoginForm = () => {
     }
   };
 
+  const errorPresence = (array) => {
+    if (array.length) {
+      return <div>The Email/Password Combination You Provided Was Incorrect!</div>
+    }
+  }
+
   const updateEmail = (e) => {
     setEmail(e.target.value);
   };
@@ -35,9 +41,10 @@ const LoginForm = () => {
       <form className="login-form" onSubmit={onLogin}>
         <p className="login-text">Log in to Friday Drinks</p>
         <div>
-          {errors.map((error) => (
-            <div>{error}</div>
-          ))}
+          {errorPresence(errors)}
+          {/* {errors.map((error) => (
+            <div>The Email/Password Combination You Provided Was Incorrect!</div>
+          ))} */}
         </div>
         <div>
           <label htmlFor="email">Email</label>
