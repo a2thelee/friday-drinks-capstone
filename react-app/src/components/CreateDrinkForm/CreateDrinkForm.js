@@ -74,10 +74,10 @@ function CreateDrinkForm() {
   return (
     <>
       <div className="user-ingredients-list">
-        <p>Active Ingredients</p>
+        <p className="active-ingredients-label"><strong>Active Ingredients</strong></p>
         {ingredientNames.map(ingredient => {
           return (
-            <p key={ingredient.id}>{ingredient.name}</p>
+            <p className="active-ingredients-list" key={ingredient.id}>{ingredient.name}</p>
           )
         })}
       </div>
