@@ -29,3 +29,13 @@
 	position: absolute;
 	right: 15%;
 }
+
+.active-ingredients-label {
+	font-family: "Allan";
+	font-size: 30px;
+}
+
+.active-ingredients-list {
+	font-family: "Allan";
+	font-size: 25px;
+}
