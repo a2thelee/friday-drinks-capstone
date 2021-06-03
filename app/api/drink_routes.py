@@ -69,6 +69,8 @@ def create_drink():
 @drink_routes.route('/<int:id>', methods=['DELETE'])
 @login_required
 def delete_drink(id):
+  if id < 71:
+    return 401
   drink = Drink.query.get(id)
   db.session.delete(drink)
   db.session.commit()
