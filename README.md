@@ -1,3 +1,22 @@
+# Friday Drinks
+Friday Drinks is a fun cocktail recipe site where users can find new and old concoctions to mix and even submit their own works!
+
+See Friday Drinks live [here](https://friday-drinks.herokuapp.com/)
+
+## Technologies
+
+* Backend: Python / Flask / SQLAlchemy / PostgresSQL
+* Frontend: React / Redux
+* Secure User Authentication using JSON Web Tokens and Bcrypt hashing
+* Boto3 in conjunction with AWS for image hosting 
+
+## Main Features
+
+1. Smooth user login/sign up flow using Modals
+2. Share your favorite cocktail recipes and images with others 
+3. Filtered search for drinks by name using Redux State Management
+4. User created cocktails are saved on a profile page, making them easier to find later! (favorites coming soon!)
+
 # Flask React Project
 
 This is the backend for the Flask React project.
