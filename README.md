@@ -12,7 +12,7 @@ See Friday Drinks live [here](https://friday-drinks.herokuapp.com/)
 
 ## Main Features
 
-1. Smooth user login/sign up flow using Modals
+1. Smooth user interface for login/sign up flow and coctail viewing using Modals
 2. Share your favorite cocktail recipes and images with others 
 3. Filtered search for drinks by name using Redux State Management
 4. User created cocktails are saved on a profile page, making them easier to find later! (favorites coming soon!)
