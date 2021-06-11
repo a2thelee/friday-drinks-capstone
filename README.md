@@ -25,6 +25,9 @@ See Friday Drinks live [here](https://friday-drinks.herokuapp.com/)
 ### Cocktail Modal
 ![friday-drinks](https://user-images.githubusercontent.com/74819177/121685696-406d3e00-ca8e-11eb-9066-0cc43766da3f.png)
 
+### Filtered Search
+![friday-drinks-search](https://user-images.githubusercontent.com/74819177/121686105-bffb0d00-ca8e-11eb-9906-e58072bfb809.png)
+
 
 # Flask React Project
 
