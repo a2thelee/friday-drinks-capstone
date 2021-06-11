@@ -17,6 +17,11 @@ See Friday Drinks live [here](https://friday-drinks.herokuapp.com/)
 3. Filtered search for drinks by name using Redux State Management
 4. User created cocktails are saved on a profile page, making them easier to find later! (favorites coming soon!)
 
+## Screen Views
+
+### Home Page
+![Home Page](https://www.flickr.com/photos/193235041@N06/shares/ZUsE97.jpg)
+
 # Flask React Project
 
 This is the backend for the Flask React project.
