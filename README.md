@@ -20,7 +20,8 @@ See Friday Drinks live [here](https://friday-drinks.herokuapp.com/)
 ## Screen Views
 
 ### Home Page
-![Home Page](https://www.flickr.com/photos/193235041@N06/shares/ZUsE97.jpg)
+![friday-drinks-landing](https://user-images.githubusercontent.com/74819177/121685568-174cad80-ca8e-11eb-986a-88c486c3f0d5.png)
+
 
 # Flask React Project
 
