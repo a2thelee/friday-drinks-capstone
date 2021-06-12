@@ -7,7 +7,6 @@ See Friday Drinks live [here](https://friday-drinks.herokuapp.com/)
 
 * Backend: Python / Flask / SQLAlchemy / PostgresSQL
 * Frontend: React / Redux
-* Secure User Authentication using JSON Web Tokens and Bcrypt hashing
 * Boto3 in conjunction with AWS for image hosting 
 
 ## Main Features
