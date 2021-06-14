@@ -1,3 +1,33 @@
+# Friday Drinks
+Friday Drinks is a fun cocktail recipe site where users can find new and old concoctions to mix and even submit their own works!
+
+See Friday Drinks live [here](https://friday-drinks.herokuapp.com/)
+
+## Technologies
+
+* Backend: Python / Flask / SQLAlchemy / PostgresSQL
+* Frontend: React / Redux
+* Boto3 in conjunction with AWS for image hosting 
+
+## Main Features
+
+1. Smooth user interface for login/sign up flow and coctail viewing using Modals
+2. Share your favorite cocktail recipes and images with others 
+3. Filtered search for drinks by name using Redux State Management
+4. User created cocktails are saved on a profile page, making them easier to find later! (favorites coming soon!)
+
+## Screen Views
+
+### Home Page
+![friday-drinks-landing](https://user-images.githubusercontent.com/74819177/121685568-174cad80-ca8e-11eb-986a-88c486c3f0d5.png)
+
+### Cocktail Modal
+![friday-drinks](https://user-images.githubusercontent.com/74819177/121685696-406d3e00-ca8e-11eb-9066-0cc43766da3f.png)
+
+### Filtered Search
+![friday-drinks-search](https://user-images.githubusercontent.com/74819177/121686105-bffb0d00-ca8e-11eb-9906-e58072bfb809.png)
+
+
 # Flask React Project
 
 This is the backend for the Flask React project.
@@ -53,46 +83,3 @@ This is the backend for the Flask React project.
    psycopg2-binary MUST remain a dev dependency because you can't install it on apline-linux.
    There is a layer in the Dockerfile that will install psycopg2 (not binary) for us.
 ***
-
-## Deploy to Heroku
-
-1. Create a new project on Heroku
-2. Under Resources click "Find more add-ons" and add the add on called "Heroku Postgres"
-3. Install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-command-line)
-4. Run
-
-   ```bash
-   heroku login
-   ```
-
-5. Login to the heroku container registry
-
-   ```bash
-   heroku container:login
-   ```
-
-6. Update the `REACT_APP_BASE_URL` variable in the Dockerfile.
-   This should be the full URL of your Heroku app: i.e. "https://flask-react-aa.herokuapp.com"
-7. Push your docker container to heroku from the root directory of your project.
-   This will build the dockerfile and push the image to your heroku container registry
-
-   ```bash
-   heroku container:push web -a {NAME_OF_HEROKU_APP}
-   ```
-
-8. Release your docker container to heroku
-
-   ```bash
-   heroku container:release web -a {NAME_OF_HEROKU_APP}
-   ```
-
-9. set up your database:
-
-   ```bash
-   heroku run -a {NAME_OF_HEROKU_APP} flask db upgrade
-   heroku run -a {NAME_OF_HEROKU_APP} flask seed all
-   ```
-
-10. Under Settings find "Config Vars" and add any additional/secret .env variables.
-
-11. profit
