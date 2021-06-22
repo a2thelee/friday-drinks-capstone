@@ -4,6 +4,9 @@ import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { useHistory } from "react-router-dom"
 import { getDrinksThunk, deleteDrinkThunk, showForm } from "../../store/drinks"
+import { makeFavoriteThunk, unFavoriteThunk } from "../../store/session"
+
+
 
 import "./DrinkCard.css"
 
@@ -11,6 +14,8 @@ const DrinkCard = (props) => {
   const userId = useSelector(state => state.session.user?.id)
   const dispatch = useDispatch()
   const history = useHistory()
+  const isFavorite = useSelector(state => state.session.user.favorites[props.drink.id]) //destructure props on line 10 to make easier keeying to
+  const drinkId = props.drink.id
 
   const ingredients = props.drink.ingredients
 
@@ -44,6 +49,18 @@ const DrinkCard = (props) => {
     }
   }
 
+  const isFavorited = () => {
+    if (!isFavorite) {
+      return (
+        <i class="far fa-heart" onClick={() => dispatch(makeFavoriteThunk(drinkId))} />
+      )
+    } else {
+      return (
+        <i class="fas fa-heart" onClick={() => dispatch(unFavoriteThunk(isFavorite.id, drinkId))}></i>
+      )
+    }
+  }
+
   return (
 
     <div
@@ -59,7 +76,7 @@ const DrinkCard = (props) => {
 
       <div className="drinkcard-name-div">
         <p>Drink Name: <strong>{props.drink.name}</strong></p>
-        <p># of Favorites: <strong>{props.drink.favorites}</strong> </p>
+        <p># of Favorites: <strong>{props.drink.number_of_favorites}</strong> </p>
       </div>
 
       <div className="drinkcard-contains-alcohol">
@@ -75,6 +92,10 @@ const DrinkCard = (props) => {
         <br></br>
         {props.drink.instructions}
       </div>
+
+
+      {/* this is the heart, styling rules are the same as text in css <i class="fas fa-heart"> is filled heart*/}
+      {isFavorited()}
 
       {checkIfUserCreated(props.drink)}
     </div >
