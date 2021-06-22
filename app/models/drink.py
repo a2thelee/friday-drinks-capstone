@@ -26,5 +26,6 @@ class Drink(db.Model):
             "authorId": self.authorId,
             "favorites": self.favorites,
             "show": False,
-            "ingredients": [ingredient.to_dict() for ingredient in self.ingredients]
+            "ingredients": [ingredient.to_dict() for ingredient in self.ingredients],
+            "number_of_favorites": len(self.favorite_drink)
         }
