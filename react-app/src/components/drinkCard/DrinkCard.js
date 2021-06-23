@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { useHistory } from "react-router-dom"
-import { getDrinksThunk, deleteDrinkThunk, showForm } from "../../store/drinks"
+import { getDrinksThunk, deleteDrinkThunk, showForm, getOneDrinkThunk } from "../../store/drinks"
 import { makeFavoriteThunk, unFavoriteThunk } from "../../store/session"
 
 
