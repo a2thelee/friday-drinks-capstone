@@ -14,7 +14,7 @@ const DrinkCard = (props) => {
   const userId = useSelector(state => state.session.user?.id)
   const dispatch = useDispatch()
   const history = useHistory()
-  const isFavorite = useSelector(state => state.session.user.favorites[props.drink.id]) //destructure props on line 10 to make easier keeying to
+  const isFavorite = useSelector(state => state?.session?.user?.favorites[props.drink.id]) //destructure props on line 10 to make easier keeying to
   const drinkId = props.drink.id
 
   const ingredients = props.drink.ingredients
@@ -50,14 +50,16 @@ const DrinkCard = (props) => {
   }
 
   const isFavorited = () => {
-    if (!isFavorite) {
-      return (
-        <i class="far fa-heart" onClick={() => dispatch(makeFavoriteThunk(drinkId))} />
-      )
-    } else {
-      return (
-        <i class="fas fa-heart" onClick={() => dispatch(unFavoriteThunk(isFavorite.id, drinkId))}></i>
-      )
+    if (userId) {
+      if (!isFavorite) {
+        return (
+          <i class="far fa-heart" onClick={() => dispatch(makeFavoriteThunk(drinkId))} />
+        )
+      } else {
+        return (
+          <i class="fas fa-heart" onClick={() => dispatch(unFavoriteThunk(isFavorite.id, drinkId))}></i>
+        )
+      }
     }
   }
 
