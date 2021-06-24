@@ -1,3 +1,5 @@
+import { favoriteDrink } from "./drinks"
+
 // constants
 const SET_USER = "session/SET_USER";
 const REMOVE_USER = "session/REMOVE_USER";
@@ -34,7 +36,8 @@ export const makeFavoriteThunk = (drinkId) => async (dispatch) => {
     })
     if (response.ok) {
         const data = await response.json();
-        dispatch(makeFavorite(data))
+        dispatch(makeFavorite(data.favoriteDrink))
+        dispatch(favoriteDrink(data.numFavorites, data.favoriteDrink.drinkId))
     } //for the love of God learn error handling
 }
 
@@ -44,11 +47,12 @@ export const unFavoriteThunk = (favoriteId, drinkId) => async (dispatch) => {
             'Content-Type': 'application/json'
         },
         method: 'DELETE',
-        body: JSON.stringify({ favoriteId })
+        body: JSON.stringify({ favoriteId, drinkId })
     })
     if (response.ok) {
         const data = await response.json();
         dispatch(unFavorite({ drinkId }))
+        dispatch(favoriteDrink(data.numFavorites, data.drinkId))
     }
 }
 
