@@ -5,6 +5,7 @@ const GET_ONE_DRINK = "drinks/GET_ONE_DRINK"
 const CREATE_DRINK = "drinks/CREATE_DRINK"
 const DELETE_DRINK = "drinks/DELETE_DRINK"
 const SHOW_FORM = "drinks/SHOW_FORM"
+const FAVORITE_DRINK = "drinks/FAVORITE_DRINK"
 
 const getDrinks = (drinks) => ({
   type: GET_DRINKS,
@@ -30,6 +31,10 @@ export const showForm = (visibility) => ({
   payload: visibility
 })
 
+export const favoriteDrink = (numFavorites, drinkId) => ({
+  type: FAVORITE_DRINK,
+  payload: { numFavorites, drinkId }
+})
 //*************** THUNK ACTION CREATORS ************************ */
 
 export const getDrinksThunk = () => async (dispatch) => {
@@ -129,9 +134,17 @@ const drinksReducer = (drinks = initialState, action) => {
       drinks[action.payload.key].show = action.payload.showForm
       return { ...drinks }
 
+    case FAVORITE_DRINK:
+      drinks[action.payload.drinkId].number_of_favorites = action.payload.numFavorites
+      return { ...drinks }
+
     default:
       return drinks
   }
 }
 
 export default drinksReducer;
+
+
+// const FAVORITE_DRINK = "drinks/FAVORITE_DRINK"
+// const UNFAVORITE_DRINK = "drinks/UNFAVORITE_DRINK"
