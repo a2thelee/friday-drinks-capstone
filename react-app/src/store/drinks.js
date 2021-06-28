@@ -103,7 +103,7 @@ export const getOneDrinkThunk = (id) => async (dispatch) => {
   }
 
   const drink = await response.json()
-  // dispatch(getOneDrink(drink))
+  dispatch(getOneDrink(drink))
 }
 
 // ******************* Reducer ********************************/
