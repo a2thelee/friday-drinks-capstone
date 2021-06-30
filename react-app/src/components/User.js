@@ -13,18 +13,10 @@ function User() {
   // Notice we use useParams here instead of getting the params
   // From props.
   const { userId } = useParams();
-  const drinks = Object.values(useSelector(state => state.drinks))
-  const userCreatedDrinks = drinks.filter(drink => drink?.authorId === Number(userId))
+  const drinks = useSelector(state => state.drinks)
+  const userCreatedDrinks = Object.values(drinks).filter(drink => drink?.authorId === Number(userId))
   const favorites = Object.values(useSelector(state => state.session.user.favorites))
-  const favoriteIds = favorites.map(favorite => favorite.drinkId)
 
-  console.log(favoriteIds, "----------------------this should be favoriteIds")
-
-  // console.log(dispatch(getOneDrinkThunk(1)), "this is the dispatch for getonedrink")
-
-  const renderFavorites = async (id) => {
-    await dispatch(getOneDrinkThunk(id))
-  }
 
   useEffect(() => {
     if (!userId) {
@@ -72,10 +64,10 @@ function User() {
       </div>
 
       <p className="user-label"><strong>Your Favorite Cocktails! (coming soon)</strong></p>
-      <div className="favorites-container">
-        {favoriteIds.map(favorite => {
+      <div className="drinks-container">
+        {favorites.map(favorite => {
           return (
-            console.log(favorite)
+            <DrinkContainer key={favorite.drinkId} drink={drinks[favorite.drinkId]} />
           )
         })}
       </div>
