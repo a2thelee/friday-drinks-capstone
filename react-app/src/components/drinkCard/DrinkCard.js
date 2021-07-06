@@ -68,38 +68,42 @@ const DrinkCard = (props) => {
     <div
       className="drinkcard-container"
     >
-      < div className="drinkcard-photo-container" >
-        <img
-          src={props.drink.photo_url}
-          className="drinkcard-photo"
-          alt="drink-pic"
-        />
-      </div >
-
-      <div className="drinkcard-name-div">
-        <p>Drink Name: <strong>{props.drink.name}</strong></p>
-        <p># of Favorites: <strong>{props.drink.number_of_favorites}</strong> </p>
+      <div className="div1">
+        <div className="drinkcard-photo-container" >
+          <img
+            src={props.drink.photo_url}
+            className="drinkcard-photo"
+            alt="drink-pic"
+          />
+        </div >
       </div>
 
-      <div className="drinkcard-contains-alcohol">
-        <p>Alcoholic/Non-Alcoholic? <strong>{drinkAlcoholic(props.drink)}</strong></p>
+      <div className="div2">
+        <div className="drinkcard-name-div">
+          <p>Drink Name: <strong>{props.drink.name}</strong></p>
+          <p># of Favorites: <strong>{props.drink.number_of_favorites}</strong> </p>
+        </div>
+
+        <div className="drinkcard-contains-alcohol">
+          <p>Alcoholic/Non-Alcoholic? <strong>{drinkAlcoholic(props.drink)}</strong></p>
+        </div>
+
+        <div className="drinkcard-ingredients">
+          <p>Ingredients: <strong>{siftedIngredients.join(", ")}</strong></p>
+        </div>
+
+        <div className="drinkcard-instructions">
+          <label><strong>Instructions</strong></label>
+          <br></br>
+          {props.drink.instructions}
+        </div>
+
+
+        {/* this is the heart, styling rules are the same as text in css <i class="fas fa-heart"> is filled heart*/}
+        {isFavorited()}
+
+        {checkIfUserCreated(props.drink)}
       </div>
-
-      <div className="drinkcard-ingredients">
-        <p>Ingredients: <strong>{siftedIngredients.join(", ")}</strong></p>
-      </div>
-
-      <div className="drinkcard-instructions">
-        <label><strong>Instructions</strong></label>
-        <br></br>
-        {props.drink.instructions}
-      </div>
-
-
-      {/* this is the heart, styling rules are the same as text in css <i class="fas fa-heart"> is filled heart*/}
-      {isFavorited()}
-
-      {checkIfUserCreated(props.drink)}
     </div >
 
   )
