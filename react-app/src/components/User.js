@@ -45,14 +45,6 @@ function User() {
 
   return (
     <div>
-      <ul>
-        <li>
-          <strong>Username:</strong> {user.username}
-        </li>
-        <li>
-          <strong>Email:</strong> {user.email}
-        </li>
-      </ul>
 
       <p className="user-label"><strong>Your Created Drinks</strong></p>
       <div className="drinks-container">
