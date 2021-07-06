@@ -34,7 +34,9 @@
 }
 
 body {
-  background: linear-gradient(0.25turn, #555B6E, #89B0AE, #BEE3DB);
+  /* background: linear-gradient(0.25turn, #555B6E, #89B0AE, #BEE3DB); */
+  /* background: #284E78; */
+  background: black;
 }
 
 .user-label {
