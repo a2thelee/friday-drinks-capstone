@@ -22,7 +22,7 @@
   border-radius: 5px;
   outline: none;
   transition: ease-out;
-  font-family: "Allan";
+  font-family: "Helvetica";
   font-size: 20px
 }
 
@@ -41,7 +41,7 @@
   border-radius: 5px;
   outline: none;
   transition: ease-out;
-  font-family: "Allan";
+  font-family: "Helvetica";
   font-size: 20px
 }
 
@@ -59,7 +59,7 @@
   border-radius: 5px;
   outline: none;
   transition: ease-out;
-  font-family: "Allan";
+  font-family: "Helvetica";
   font-size: 20px
 }
 
@@ -114,7 +114,7 @@
 
 .navbar-navlink {
   text-decoration: none;
-  font-family: "Allan";
+  font-family: "Helvetica";
   font-size: 20px;
 
 }

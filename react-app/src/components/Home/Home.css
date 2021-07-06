@@ -28,7 +28,7 @@
 
 .drink-container-name {
   text-align: center;
-  font-family: "Allan";
+  font-family: "Helvetica";
   font-size: 25px;
   color: #4b778d
 }
@@ -38,7 +38,7 @@ body {
 }
 
 .user-label {
-  font-family: "Allan";
+  font-family: "Helvetica";
   text-align: center;
   font-size: 40px;
   color: #555B6E;
