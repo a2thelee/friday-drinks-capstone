@@ -1,6 +1,8 @@
+/* styling for the modal */
+
 .drinkcard-instructions {
   width: 500px;
-  font-family: "Helvetica";
+  font-family: "'Raleway', sans-serif";
 }
 
 
@@ -9,9 +11,15 @@
 }
 
 .drinkcard-container p {
-  font-family: "Helvetica";
+  font-family: "'Raleway', sans-serif";
 }
 
 .drinkcard-container {
+  display: flex;
+  flex-direction: row;
   background: linear-gradient(0.25turn, #d8e3e7, #f8ede3, #f7f3e9);
+}
+
+.div2 {
+  padding-left: 2%;
 }

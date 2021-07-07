@@ -16,30 +16,39 @@
   border: 1px solid;
   border-radius: 5px;
   margin: 15px;
-  box-shadow: 0px 4px 12px #BEE3DB;
-  background-color:#f8ede3;
+  /* box-shadow: 0px 4px 12px #6fad9e; */
+  /* background-color:#f8ede3; */
+  background-color: #E1E8EB;
   cursor: pointer;
 }
 
+.single-drink-container:hover {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0px 4px 12px #ffffff;
+}
+
+
 .drink-text-div {
   width: 200px;
-  font-family: Helvetica;
+  font-family: 'Raleway', sans-serif;
 }
 
 .drink-container-name {
   text-align: center;
-  font-family: "Helvetica";
+  font-family: 'Raleway', sans-serif;
   font-size: 25px;
-  color: #4b778d
+  color: black;
 }
 
 body {
-  background: linear-gradient(0.25turn, #555B6E, #89B0AE, #BEE3DB);
+  /* background: linear-gradient(0.25turn, #555B6E, #89B0AE, #BEE3DB); */
+  /* background: #284E78; */
+  background: black;
 }
 
 .user-label {
-  font-family: "Helvetica";
+  font-family: "'Raleway', sans-serif";
   text-align: center;
   font-size: 40px;
-  color: #555B6E;
+  color: white;
 }

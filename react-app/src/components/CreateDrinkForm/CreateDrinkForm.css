@@ -26,16 +26,17 @@
 
 
 .user-ingredients-list {
+	color: white;
 	position: absolute;
 	right: 15%;
 }
 
 .active-ingredients-label {
-	font-family: "Helvetica";
+	font-family: "'Raleway', sans-serif";
 	font-size: 30px;
 }
 
 .active-ingredients-list {
-	font-family: "Helvetica";
+	font-family: "'Raleway', sans-serif";
 	font-size: 25px;
 }
