@@ -34,7 +34,7 @@
 
 .logged-out-button2 {
   position: absolute;
-  /* margin-left: 20%; */
+  right: 25%;
   margin-top: 1%;
   background-color: inherit;
   box-shadow: inset 0 0 0 0 #555B6E;
@@ -141,5 +141,5 @@
   background: none;
   cursor: pointer;
   font-size: 20px;
-  font-family: "Allan"
+  font-family: "Helvetica";
 }
