@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from 'react-redux'
 import { useParams } from "react-router-dom";
-import { getDrinksThunk, getOneDrinkThunk } from "../store/drinks"
+import { getDrinksThunk } from "../store/drinks"
 import DrinkContainer from "./drinkContainer/DrinkContainer"
 
 //any css here would be done in Home.css or related drinkcontainer/drinkcard
