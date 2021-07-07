@@ -16,14 +16,14 @@
   border: 1px solid;
   border-radius: 5px;
   margin: 15px;
-  /* box-shadow: 0px 4px 12px #BEE3DB; */
+  box-shadow: 0px 4px 12px #6fad9e;
   background-color:#f8ede3;
   cursor: pointer;
 }
 
 .single-drink-container:hover {
   color: rgba(255, 255, 255, 1);
-  box-shadow: 0px 4px 12px #BEE3DB;
+  box-shadow: 0px 4px 12px #ffffff;
 }
 
 
