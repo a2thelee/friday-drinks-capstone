@@ -1,3 +1,5 @@
+// STYLING FOR THIS COMPONENT CAN BE FOUND IN home.css
+
 import React, { useState } from "react"
 import { Modal } from "../../context/Modal"
 import DrinkCard from "../drinkCard/DrinkCard"
