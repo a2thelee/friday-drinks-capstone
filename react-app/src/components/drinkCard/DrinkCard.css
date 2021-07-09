@@ -23,3 +23,7 @@
 .div2 {
   padding-left: 2%;
 }
+
+.fa-heart {
+  cursor: pointer;
+}
