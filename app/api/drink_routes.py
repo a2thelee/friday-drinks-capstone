@@ -7,10 +7,6 @@ from flask_login import login_required, current_user
 
 drink_routes = Blueprint('drinks', __name__)
 
-# print(os.environ.get("S3_SECRET_KEY"), "s3secret key-------------")
-# print(os.environ.get("S3_KEY"), "s3-key-----------------")
-# print(os.environ.get("S3_BUCKET"), "bucket-----------------------------")
-
 # get all drinks route. WORKS
 @drink_routes.route('/')
 def all_drinks():
@@ -66,6 +62,7 @@ def create_drink():
 
 
 # Delete drink route. WORKS
+#the if condition prevents bad users from deleting seeded drinks
 @drink_routes.route('/<int:id>', methods=['DELETE'])
 @login_required
 def delete_drink(id):
