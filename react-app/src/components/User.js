@@ -55,7 +55,7 @@ function User() {
         })}
       </div>
 
-      <p className="user-label"><strong>Your Favorite Cocktails!</strong></p>
+      <p className="user-label"><strong>Your Favorite Cocktails</strong></p>
       <div className="drinks-container">
         {favorites.map(favorite => {
           return (

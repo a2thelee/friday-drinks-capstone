@@ -5,5 +5,8 @@ body{
 }
 
 i {
-  color: red
+  color: red;
+  position: absolute;
+  right: 3%;
+  bottom: 8%;
 }

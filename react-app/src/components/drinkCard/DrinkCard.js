@@ -57,7 +57,7 @@ const DrinkCard = (props) => {
         )
       } else {
         return (
-          <i class="fas fa-heart" onClick={() => dispatch(unFavoriteThunk(isFavorite.id, drinkId))}></i>
+          <i class="fas fa-heart" onClick={() => dispatch(unFavoriteThunk(isFavorite.id, drinkId))} />
         )
       }
     }
