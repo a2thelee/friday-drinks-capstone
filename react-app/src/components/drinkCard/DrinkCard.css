@@ -27,3 +27,17 @@
 .fa-heart {
   cursor: pointer;
 }
+
+i {
+  color: red;
+  position: absolute;
+  right: 47%;
+  bottom: 8%;
+  font-size: 24px;
+}
+
+.drink-delete-button {
+  position: absolute;
+  right: 3%;
+  bottom: 8%;
+}
