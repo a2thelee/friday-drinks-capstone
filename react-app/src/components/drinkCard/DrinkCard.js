@@ -43,7 +43,7 @@ const DrinkCard = (props) => {
     if (drink.authorId === userId) {
       return (
         <div>
-          <button onClick={() => handleClick(drink.id)}>X</button>
+          <button class="drink-delete-button" onClick={() => handleClick(drink.id)}>X</button>
         </div>
       )
     }

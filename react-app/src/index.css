@@ -3,10 +3,3 @@ body{
   margin: 0;
   font-family: 'Raleway', sans-serif;
 }
-
-i {
-  color: red;
-  position: absolute;
-  right: 3%;
-  bottom: 8%;
-}
