@@ -84,7 +84,7 @@ const NavBar = () => {
                   setEmail("demo@aa.io")
                   setPassword("password")
                   dispatch(login("demo@aa.io", "password"))
-                }}>Demo User</button>
+                }}>Demo Login</button>
             </li>
             <li>
               <button className="logged-out-button2" onClick={() => setShowModal(true)}>Sign Up</button>
