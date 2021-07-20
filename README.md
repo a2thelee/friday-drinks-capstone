@@ -17,6 +17,10 @@ See Friday Drinks live [here](https://friday-drinks.herokuapp.com/)
 4. Filtered search for drinks by name using Redux Library!
 5. User profile page to store user-created and favorite cocktails!
 
+## Recent Additions/ Currently Implementing
+
+1. Favorites (Added June)
+
 ## Screen Views
 
 ### Home Page
