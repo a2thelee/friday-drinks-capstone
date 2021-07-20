@@ -6,7 +6,7 @@ See Friday Drinks live [here](https://friday-drinks.herokuapp.com/)
 ## Technologies
 
 * Backend: Python / Flask / SQLAlchemy / PostgresSQL
-* Frontend: React / Redux / CSS3 / HTML5
+* Frontend: JavaScript / React / Redux / CSS3 / HTML5
 * Boto3 in conjunction with AWS for image hosting 
 
 ## Main Features
