@@ -20,7 +20,8 @@ See Friday Drinks live [here](https://friday-drinks.herokuapp.com/)
 ## Recent Additions/ Currently Implementing
 
 1. Favorites (Added June 30 2021)
-2. Modal Design (Redesigned July)
+2. Modal Design (Redesigned July 5, 2021)
+3. Currently focusing on making page more responsive every day!
 
 ## Screen Views
 
