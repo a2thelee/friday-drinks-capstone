@@ -37,7 +37,7 @@ See Friday Drinks live [here](https://friday-drinks.herokuapp.com/)
 ### Filtered Search/Search Result
 ![friday-drinks-search](https://user-images.githubusercontent.com/74819177/126399816-75c2ceea-a0b0-448d-9373-72a2c55ce226.png)
 
-## Special Thanks to ![TheCocktailDB.com](https://www.thecocktaildb.com/) for helping make this happen!
+## Special Thanks to [TheCocktailDB.com](https://www.thecocktaildb.com/) for helping make this happen!
 
 # Flask React Project
 
