@@ -1,3 +1,5 @@
+// home page which essentially the container that maps through all drinks and renders a drinkcontainer tile for each drink.
+
 import { getDrinksThunk } from "../../store/drinks"
 import { useDispatch, useSelector } from "react-redux"
 import React, { useEffect, useState } from 'react'

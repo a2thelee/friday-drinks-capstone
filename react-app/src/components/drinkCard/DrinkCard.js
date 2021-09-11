@@ -1,4 +1,4 @@
-//this is modal component
+//this is the modal component that displays all drink information
 
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
@@ -99,7 +99,7 @@ const DrinkCard = (props) => {
         </div>
 
 
-        {/* this is the heart, styling rules are the same as text in css <i class="fas fa-heart"> is filled heart*/}
+        {/* this is the heart icon; styling rules are the same as text in css <i class="fas fa-heart"> is filled heart*/}
         {isFavorited()}
 
         {checkIfUserCreated(props.drink)}

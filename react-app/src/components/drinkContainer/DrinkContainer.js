@@ -1,4 +1,4 @@
-// this component is built to hold all the drink modals, found on our homepage
+// this component is built to hold all the drink tiles, found on our homepage
 // STYLING FOR THIS COMPONENT CAN BE FOUND IN home.css
 
 import React, { useState } from "react"
