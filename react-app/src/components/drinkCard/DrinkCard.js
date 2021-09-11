@@ -1,4 +1,4 @@
-//this is modal component
+//this is the modal component for every drink
 
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
