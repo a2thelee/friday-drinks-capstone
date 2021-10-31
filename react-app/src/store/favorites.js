@@ -2,6 +2,8 @@
 
 const GET_FAVORITES = "favorites/GET_FAVORITES"
 
+// ******************** Action Creators ***********************
+
 const getFavorites = (favorites) => ({
   type: GET_FAVORITES,
   payload: favorites
