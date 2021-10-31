@@ -1,10 +1,12 @@
 import { favoriteDrink } from "./drinks"
 
-// constants
+// actions
 const SET_USER = "session/SET_USER";
 const REMOVE_USER = "session/REMOVE_USER";
 const MAKE_FAVORITE = "session/MAKE_FAVORITE";
 const UN_FAVORITE = "session/UN_FAVORITE";
+
+// ******************** Action Creators ***********************
 
 const setUser = (user) => ({
     type: SET_USER,
@@ -25,7 +27,7 @@ const unFavorite = (favorite) => ({
     payload: favorite
 })
 
-// thunks
+// thunk action creators
 export const makeFavoriteThunk = (drinkId) => async (dispatch) => {
     const response = await fetch(`/api/users/favorites`, {
         headers: {

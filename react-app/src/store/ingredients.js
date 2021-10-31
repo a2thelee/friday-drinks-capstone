@@ -2,6 +2,8 @@
 
 const GET_INGREDIENTS = "ingredients/GET_INGREDIENTS"
 
+// ******************** Action Creators ***********************
+
 const getIngredients = (ingredients) => ({
   type: GET_INGREDIENTS,
   payload: ingredients

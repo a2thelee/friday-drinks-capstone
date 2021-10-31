@@ -7,6 +7,8 @@ const DELETE_DRINK = "drinks/DELETE_DRINK"
 const SHOW_FORM = "drinks/SHOW_FORM"
 const FAVORITE_DRINK = "drinks/FAVORITE_DRINK"
 
+// ******************** Action Creators ***********************
+
 const getDrinks = (drinks) => ({
   type: GET_DRINKS,
   payload: drinks
