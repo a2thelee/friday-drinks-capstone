@@ -2,6 +2,7 @@
 
 const GET_DRINK_INGREDIENTS = "ingredients/GET_DRINK_INGREDIENTS"
 
+// ******************** Action Creators ***********************
 
 const getDrinkIngredients = (drinkIngredients) => ({
   type: GET_DRINK_INGREDIENTS,
